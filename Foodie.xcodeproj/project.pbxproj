@@ -82,7 +82,7 @@
 		247399CB1D34ED3F00094DCD /* Foodie */ = {
 			isa = PBXGroup;
 			children = (
-				247399E61D34EF2500094DCD /* Cless */,
+				247399E61D34EF2500094DCD /* Class */,
 				24739A021D34F1D800094DCD /* Register[请求] */,
 				24739A011D34F10C00094DCD /* Other[其它] */,
 				247399CF1D34ED3F00094DCD /* AppDelegate.h */,
@@ -105,7 +105,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		247399E61D34EF2500094DCD /* Cless */ = {
+		247399E61D34EF2500094DCD /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				247399E71D34EF2500094DCD /* 第一界面 */,
@@ -113,6 +113,7 @@
 				247399F11D34EF2500094DCD /* 第二界面 */,
 				247399F61D34EF2500094DCD /* 第四界面 */,
 			);
+			name = Class;
 			path = Cless;
 			sourceTree = "<group>";
 		};
