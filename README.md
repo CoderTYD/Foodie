@@ -37,7 +37,7 @@
 
 ---
 ## 反馈与建议
-- **开发者：**[@朕在朴](http://www.jianshu.com/users/a8a031000319/latest_articles)，[@唐半仙丶](http://www.jianshu.com/users/a8a031000319/latest_articles)，[@忠诚](http://www.jianshu.com/users/a8a031000319/latest_articles)，[@傻学](http://www.jianshu.com/users/a8a031000319/latest_articles)
+- **开发者：**[@朕在朴](http://www.jianshu.com/users/a8a031000319/latest_articles)，[@唐半仙丶](https://github.com/CoderTYD)，[@忠诚](http://www.jianshu.com/users/a8a031000319/latest_articles)，[@傻学](http://www.jianshu.com/users/a8a031000319/latest_articles)
 - **邮箱：**<leader6881@163.com>
 
 
