@@ -16,6 +16,9 @@
 		247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247399DD1D34ED3F00094DCD /* LaunchScreen.storyboard */; };
 		24739A071D34F22A00094DCD /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A041D34F22A00094DCD /* BaseRequest.m */; };
 		24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A061D34F22A00094DCD /* NetWorkRequest.m */; };
+		24739A101D35036700094DCD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A0F1D35036700094DCD /* RootViewController.m */; };
+		24739A141D3505E400094DCD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A131D3505E400094DCD /* BaseViewController.m */; };
+		24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A191D35083500094DCD /* FoodieTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,12 @@
 		24739A051D34F22A00094DCD /* NetWorkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkRequest.h; sourceTree = "<group>"; };
 		24739A061D34F22A00094DCD /* NetWorkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkRequest.m; sourceTree = "<group>"; };
 		24739A0A1D34F42E00094DCD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		24739A0E1D35036700094DCD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		24739A0F1D35036700094DCD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		24739A121D3505E400094DCD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		24739A131D3505E400094DCD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		24739A181D35083500094DCD /* FoodieTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodieTabBar.h; sourceTree = "<group>"; };
+		24739A191D35083500094DCD /* FoodieTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodieTabBar.m; sourceTree = "<group>"; };
 		6A1E6D64A6E66718E880A338 /* Pods-Foodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.debug.xcconfig"; sourceTree = "<group>"; };
 		859F2700D1932442456B998E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,8 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				247399E61D34EF2500094DCD /* Cless */,
-				24739A021D34F1D800094DCD /* Register */,
-				24739A011D34F10C00094DCD /* Other */,
+				24739A021D34F1D800094DCD /* Register[请求] */,
+				24739A011D34F10C00094DCD /* Other[其它] */,
 				247399CF1D34ED3F00094DCD /* AppDelegate.h */,
 				247399D01D34ED3F00094DCD /* AppDelegate.m */,
 				247399D51D34ED3F00094DCD /* Main.storyboard */,
@@ -263,17 +272,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		24739A011D34F10C00094DCD /* Other */ = {
+		24739A011D34F10C00094DCD /* Other[其它] */ = {
 			isa = PBXGroup;
 			children = (
-				247399FF1D34F0E200094DCD /* CommonString.h */,
-				247399FE1D34F0A700094DCD /* RequestUrl.h */,
-				24739A0A1D34F42E00094DCD /* PrefixHeader.pch */,
+				24739A181D35083500094DCD /* FoodieTabBar.h */,
+				24739A191D35083500094DCD /* FoodieTabBar.m */,
+				24739A0E1D35036700094DCD /* RootViewController.h */,
+				24739A0F1D35036700094DCD /* RootViewController.m */,
+				24739A121D3505E400094DCD /* BaseViewController.h */,
+				24739A131D3505E400094DCD /* BaseViewController.m */,
+				24739A111D3505C200094DCD /* 工具 */,
 			);
-			name = Other;
+			name = "Other[其它]";
 			sourceTree = "<group>";
 		};
-		24739A021D34F1D800094DCD /* Register */ = {
+		24739A021D34F1D800094DCD /* Register[请求] */ = {
 			isa = PBXGroup;
 			children = (
 				24739A031D34F22A00094DCD /* BaseRequest.h */,
@@ -281,7 +294,17 @@
 				24739A051D34F22A00094DCD /* NetWorkRequest.h */,
 				24739A061D34F22A00094DCD /* NetWorkRequest.m */,
 			);
-			name = Register;
+			name = "Register[请求]";
+			sourceTree = "<group>";
+		};
+		24739A111D3505C200094DCD /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				247399FF1D34F0E200094DCD /* CommonString.h */,
+				247399FE1D34F0A700094DCD /* RequestUrl.h */,
+				24739A0A1D34F42E00094DCD /* PrefixHeader.pch */,
+			);
+			name = "工具";
 			sourceTree = "<group>";
 		};
 		A126282766924D24C53652A7 /* Pods */ = {
@@ -422,7 +445,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */,
 				24739A071D34F22A00094DCD /* BaseRequest.m in Sources */,
+				24739A141D3505E400094DCD /* BaseViewController.m in Sources */,
+				24739A101D35036700094DCD /* RootViewController.m in Sources */,
 				24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */,
 				247399DA1D34ED3F00094DCD /* Foodie.xcdatamodeld in Sources */,
 				247399D11D34ED3F00094DCD /* AppDelegate.m in Sources */,
