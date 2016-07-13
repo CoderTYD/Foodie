@@ -13,6 +13,7 @@
 		247131B31D35DEA3005491A1 /* ren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 247131B21D35DEA3005491A1 /* ren.jpg */; };
 		247131B81D35E1F9005491A1 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247131B61D35E1F9005491A1 /* MyTableViewCell.m */; };
 		247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247131B71D35E1F9005491A1 /* MyTableViewCell.xib */; };
+		247132081D363D67005491A1 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247132071D363D67005491A1 /* FoodViewController.m */; };
 		247399CE1D34ED3F00094DCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 247399CD1D34ED3F00094DCD /* main.m */; };
 		247399D11D34ED3F00094DCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 247399D01D34ED3F00094DCD /* AppDelegate.m */; };
 		247399D71D34ED3F00094DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247399D51D34ED3F00094DCD /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 		247131B51D35E1F9005491A1 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		247131B61D35E1F9005491A1 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		247131B71D35E1F9005491A1 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		247132061D363D67005491A1 /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodViewController.h; path = "Foodie/Cless/第四界面/Controller/FoodViewController.h"; sourceTree = SOURCE_ROOT; };
+		247132071D363D67005491A1 /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodViewController.m; path = "Foodie/Cless/第四界面/Controller/FoodViewController.m"; sourceTree = SOURCE_ROOT; };
 		247399C91D34ED3F00094DCD /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247399CD1D34ED3F00094DCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		247399CF1D34ED3F00094DCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 		247399E81D34EF2500094DCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				247132061D363D67005491A1 /* FoodViewController.h */,
+				247132071D363D67005491A1 /* FoodViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247132081D363D67005491A1 /* FoodViewController.m in Sources */,
 				24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */,
 				24739A071D34F22A00094DCD /* BaseRequest.m in Sources */,
 				24739A141D3505E400094DCD /* BaseViewController.m in Sources */,
