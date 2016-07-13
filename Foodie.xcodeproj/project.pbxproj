@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0C4CE5ED2111372CFA3D0FA5 /* libPods-Foodie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */; };
+		247131AF1D35CDE3005491A1 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247131AE1D35CDE3005491A1 /* MyViewController.m */; };
+		247131B11D35D5E5005491A1 /* myImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 247131B01D35D5E5005491A1 /* myImage.png */; };
+		247131B31D35DEA3005491A1 /* ren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 247131B21D35DEA3005491A1 /* ren.jpg */; };
+		247131B81D35E1F9005491A1 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247131B61D35E1F9005491A1 /* MyTableViewCell.m */; };
+		247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247131B71D35E1F9005491A1 /* MyTableViewCell.xib */; };
 		247399CE1D34ED3F00094DCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 247399CD1D34ED3F00094DCD /* main.m */; };
 		247399D11D34ED3F00094DCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 247399D01D34ED3F00094DCD /* AppDelegate.m */; };
 		247399D71D34ED3F00094DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247399D51D34ED3F00094DCD /* Main.storyboard */; };
@@ -22,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		247131AD1D35CDE3005491A1 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		247131AE1D35CDE3005491A1 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		247131B01D35D5E5005491A1 /* myImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImage.png; sourceTree = "<group>"; };
+		247131B21D35DEA3005491A1 /* ren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ren.jpg; sourceTree = "<group>"; };
+		247131B51D35E1F9005491A1 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		247131B61D35E1F9005491A1 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		247131B71D35E1F9005491A1 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		247399C91D34ED3F00094DCD /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		247399CD1D34ED3F00094DCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		247399CF1D34ED3F00094DCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		247131B41D35E1E6005491A1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				247131B51D35E1F9005491A1 /* MyTableViewCell.h */,
+				247131B61D35E1F9005491A1 /* MyTableViewCell.m */,
+				247131B71D35E1F9005491A1 /* MyTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		247399C01D34ED3F00094DCD = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +104,7 @@
 		247399CB1D34ED3F00094DCD /* Foodie */ = {
 			isa = PBXGroup;
 			children = (
+				247131B21D35DEA3005491A1 /* ren.jpg */,
 				247399E61D34EF2500094DCD /* Class */,
 				24739A021D34F1D800094DCD /* Register[请求] */,
 				24739A011D34F10C00094DCD /* Other[其它] */,
@@ -248,6 +271,8 @@
 		247399F71D34EF2500094DCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				247131AD1D35CDE3005491A1 /* MyViewController.h */,
+				247131AE1D35CDE3005491A1 /* MyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +294,7 @@
 		247399FA1D34EF2500094DCD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				247131B41D35E1E6005491A1 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +302,7 @@
 		24739A011D34F10C00094DCD /* Other[其它] */ = {
 			isa = PBXGroup;
 			children = (
+				247131B01D35D5E5005491A1 /* myImage.png */,
 				24739A181D35083500094DCD /* FoodieTabBar.h */,
 				24739A191D35083500094DCD /* FoodieTabBar.m */,
 				24739A0E1D35036700094DCD /* RootViewController.h */,
@@ -386,8 +413,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */,
+				247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */,
 				247399DC1D34ED3F00094DCD /* Assets.xcassets in Resources */,
 				247399D71D34ED3F00094DCD /* Main.storyboard in Resources */,
+				247131B31D35DEA3005491A1 /* ren.jpg in Resources */,
+				247131B11D35D5E5005491A1 /* myImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +479,13 @@
 				24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */,
 				24739A071D34F22A00094DCD /* BaseRequest.m in Sources */,
 				24739A141D3505E400094DCD /* BaseViewController.m in Sources */,
+				247131AF1D35CDE3005491A1 /* MyViewController.m in Sources */,
 				24739A101D35036700094DCD /* RootViewController.m in Sources */,
 				24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */,
 				247399DA1D34ED3F00094DCD /* Foodie.xcdatamodeld in Sources */,
 				247399D11D34ED3F00094DCD /* AppDelegate.m in Sources */,
 				247399CE1D34ED3F00094DCD /* main.m in Sources */,
+				247131B81D35E1F9005491A1 /* MyTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
