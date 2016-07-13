@@ -1,6 +1,6 @@
 # Foodie
 
-###我们不卖美食,只做美食的搬运工.
+###我们不做美食,只做美食的搬运工.
 ---
 ![Smaller icon](http://pic.58pic.com/58pic/13/85/26/79M58PICFtT_1024.jpg "Title here")
 
