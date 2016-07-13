@@ -27,14 +27,6 @@
 
 
 
-| 开发者 | ID | 职位 |
-| :-------- | --------:| :--: |
-| **朕在朴**| zhangzhenzz  | iOS 开发工程师 |
-| **忠诚**   | hezhongcheng | iOS 开发工程师  |
-| **唐半仙** | CoderTYD     | iOS 开发工程师 |
-| **傻学**   | MarksJerry   | iOS 开发工程师  |
-
-
 ---
 ## 反馈与建议
 - **开发者：**[@朕在朴](http://www.jianshu.com/users/a8a031000319/latest_articles)，[@唐半仙丶](https://github.com/CoderTYD)，[@忠诚](http://www.jianshu.com/users/a8a031000319/latest_articles)，[@傻学](http://www.jianshu.com/users/a8a031000319/latest_articles)
