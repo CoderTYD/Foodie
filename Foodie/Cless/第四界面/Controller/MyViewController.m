@@ -30,21 +30,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 设置导航控制器的代理为self
-    self.navigationController.delegate = self;
+    
     //圆角
     self.headImage.layer.masksToBounds = YES;
     self.headImage.layer.cornerRadius = self.headImage.bounds.size.width / 2.0;
     
-    
+    // 设置导航控制器的代理为self
+    self.navigationController.delegate = self;
+    // 设置代理
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     
+    //注册 Cell
     [self.myTableView registerNib:[UINib nibWithNibName:@"MyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:MyTableViewCell_Identify];
+    
+    //左边按钮
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"MainTagSubIcon"] style:(UIBarButtonItemStylePlain) target:self action:@selector(rightBarAction:)];
+    //右边设置按钮
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"mine-setting-icon"] style:(UIBarButtonItemStyleDone) target:self action:@selector(setupBarAction:)];
+    
     
 }
 
-
+//左边按钮点击事件
+-(void)rightBarAction:(UIBarButtonItem *)sender{
+    
+    NSLog(@"第四界面,左按钮");
+    
+}
+//右边设置按钮点击事件
+- (void)setupBarAction:(UIBarButtonItem *)sender{
+    
+    
+    NSLog(@"第四页面,设置按钮");
+    
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
@@ -64,16 +84,10 @@
         cell.imageView.image = self.imagesArr[indexPath.row] ;
         cell.textLabel.text = self.labelArr[indexPath.row];
         
-        
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-        
-        
-        
+    
         return cell;
 
-    
-    
-    
 }
 #pragma make-懒加载
 - (NSArray *)imagesArr{
@@ -115,7 +129,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 /*
 #pragma mark - Navigation
 
