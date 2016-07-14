@@ -10,6 +10,8 @@
 #import "SDCycleScrollView.h"
 @interface FoodViewController ()<SDCycleScrollViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UIView *foodView;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundView;
 @end
 
 @implementation FoodViewController
@@ -18,14 +20,14 @@
     [super viewDidLoad];
     
     
-    self.view.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:0.99];
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"005.jpg"]];
-    backgroundView.frame = self.view.bounds;
-    [self.view addSubview:backgroundView];
+    self.foodView.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:0.99];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"005.jpg"]];
+    _backgroundView.frame = self.view.bounds;
+    [self.foodView addSubview:_backgroundView];
     
     UIScrollView *demoContainerView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 200);
-    [self.view addSubview:demoContainerView];
+    [self.foodView addSubview:demoContainerView];
     
     
     // 情景二：采用网络图片实现
@@ -47,7 +49,7 @@
     CGFloat w = self.view.bounds.size.width;
     
     // 网络加载 --- 创建带标题的图片轮播器
-    SDCycleScrollView *cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 64, w, 200) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    SDCycleScrollView *cycleScrollView2 = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, w, 200) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
     cycleScrollView2.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     cycleScrollView2.titlesGroup = titles;
