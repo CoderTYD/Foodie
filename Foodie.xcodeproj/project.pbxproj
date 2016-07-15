@@ -48,6 +48,8 @@
 		24D33C3E1D37CE8100D6F765 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33C251D37CE8100D6F765 /* UIImageView+HighlightedWebCache.m */; };
 		24D33C3F1D37CE8100D6F765 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33C271D37CE8100D6F765 /* UIImageView+WebCache.m */; };
 		24D33C401D37CE8100D6F765 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33C291D37CE8100D6F765 /* UIView+WebCacheOperation.m */; };
+		D687AC081D3871B6008D68F7 /* FisrtTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D687AC061D3871B6008D68F7 /* FisrtTableViewCell.m */; };
+		D687AC091D3871B6008D68F7 /* FisrtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D687AC071D3871B6008D68F7 /* FisrtTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,9 @@
 		6A1E6D64A6E66718E880A338 /* Pods-Foodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.debug.xcconfig"; sourceTree = "<group>"; };
 		859F2700D1932442456B998E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D687AC051D3871B6008D68F7 /* FisrtTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FisrtTableViewCell.h; sourceTree = "<group>"; };
+		D687AC061D3871B6008D68F7 /* FisrtTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FisrtTableViewCell.m; sourceTree = "<group>"; };
+		D687AC071D3871B6008D68F7 /* FisrtTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FisrtTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +255,9 @@
 		247399EB1D34EF2500094DCD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D687AC051D3871B6008D68F7 /* FisrtTableViewCell.h */,
+				D687AC061D3871B6008D68F7 /* FisrtTableViewCell.m */,
+				D687AC071D3871B6008D68F7 /* FisrtTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,6 +577,7 @@
 			files = (
 				247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */,
 				247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */,
+				D687AC091D3871B6008D68F7 /* FisrtTableViewCell.xib in Resources */,
 				247399DC1D34ED3F00094DCD /* Assets.xcassets in Resources */,
 				247399D71D34ED3F00094DCD /* Main.storyboard in Resources */,
 				247131B31D35DEA3005491A1 /* ren.jpg in Resources */,
@@ -649,6 +658,7 @@
 				24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */,
 				24D33C3B1D37CE8100D6F765 /* UIImage+GIF.m in Sources */,
 				24D33C3D1D37CE8100D6F765 /* UIImage+WebP.m in Sources */,
+				D687AC081D3871B6008D68F7 /* FisrtTableViewCell.m in Sources */,
 				24D33C321D37CE8100D6F765 /* NSData+ImageContentType.m in Sources */,
 				24D33C341D37CE8100D6F765 /* SDWebImageCompat.m in Sources */,
 				247399DA1D34ED3F00094DCD /* Foodie.xcdatamodeld in Sources */,
