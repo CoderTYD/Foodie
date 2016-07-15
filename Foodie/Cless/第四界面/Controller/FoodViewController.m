@@ -8,10 +8,22 @@
 
 #import "FoodViewController.h"
 #import "SDCycleScrollView.h"
-@interface FoodViewController ()<SDCycleScrollViewDelegate>
+#import "recommendTableViewCell.h"
+@interface FoodViewController ()
+<
+    SDCycleScrollViewDelegate,
+    UITableViewDataSource,
+    UITableViewDelegate
 
+>
+
+//轮播图地图
 @property (strong, nonatomic) IBOutlet UIView *foodView;
+//今日推荐
+@property (strong, nonatomic) IBOutlet UITableView *recommendTableView;
+//背景图
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundView;
+
 @end
 
 @implementation FoodViewController
@@ -19,6 +31,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.recommendTableView.delegate = self;
+    self.recommendTableView.dataSource = self;
+
+    [self.recommendTableView registerNib:[UINib nibWithNibName:@"recommendTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:recommendTableViewCell_Identifier];
+    
+    [self headCarouselView];
+    
+}
+
+
+
+//轮播图
+- (void)headCarouselView{
     
     self.foodView.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:0.99];
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"005.jpg"]];
@@ -62,16 +87,39 @@
     });
     
     
-    
-    
 }
-
+//轮播图点击方法
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"---点击了第%ld张图片", (long)index);
     
     [self.navigationController pushViewController:[NSClassFromString(@"DemoVCWithXib") new] animated:YES];
 }
+//cell的高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 150;
+}
+//cell 的个数
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    
+    return 4;
+}
+
+//返回 cell
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    recommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTableViewCell_Identifier forIndexPath:indexPath];
+    
+    
+    
+    return cell;
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
