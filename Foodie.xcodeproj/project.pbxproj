@@ -25,6 +25,9 @@
 		24739A101D35036700094DCD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A0F1D35036700094DCD /* RootViewController.m */; };
 		24739A141D3505E400094DCD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A131D3505E400094DCD /* BaseViewController.m */; };
 		24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24739A191D35083500094DCD /* FoodieTabBar.m */; };
+		247F63BA1D38D41A008D45B1 /* recommendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247F63B81D38D41A008D45B1 /* recommendTableViewCell.m */; };
+		247F63BB1D38D41A008D45B1 /* recommendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247F63B91D38D41A008D45B1 /* recommendTableViewCell.xib */; };
+		247F63BD1D38D6B9008D45B1 /* 4967922_4641_1000x500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 247F63BC1D38D6B9008D45B1 /* 4967922_4641_1000x500.jpg */; };
 		24D33C2A1D37CE8100D6F765 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33BFB1D37CE8100D6F765 /* TAAbstractDotView.m */; };
 		24D33C2B1D37CE8100D6F765 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33BFD1D37CE8100D6F765 /* TAAnimatedDotView.m */; };
 		24D33C2C1D37CE8100D6F765 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33BFF1D37CE8100D6F765 /* TADotView.m */; };
@@ -84,6 +87,10 @@
 		24739A131D3505E400094DCD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		24739A181D35083500094DCD /* FoodieTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodieTabBar.h; sourceTree = "<group>"; };
 		24739A191D35083500094DCD /* FoodieTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodieTabBar.m; sourceTree = "<group>"; };
+		247F63B71D38D41A008D45B1 /* recommendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recommendTableViewCell.h; sourceTree = "<group>"; };
+		247F63B81D38D41A008D45B1 /* recommendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = recommendTableViewCell.m; sourceTree = "<group>"; };
+		247F63B91D38D41A008D45B1 /* recommendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = recommendTableViewCell.xib; sourceTree = "<group>"; };
+		247F63BC1D38D6B9008D45B1 /* 4967922_4641_1000x500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4967922_4641_1000x500.jpg; sourceTree = "<group>"; };
 		24D33BFA1D37CE8100D6F765 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		24D33BFB1D37CE8100D6F765 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
 		24D33BFC1D37CE8100D6F765 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
@@ -183,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				247131B21D35DEA3005491A1 /* ren.jpg */,
+				247F63BC1D38D6B9008D45B1 /* 4967922_4641_1000x500.jpg */,
 				247399E61D34EF2500094DCD /* Class */,
 				24739A021D34F1D800094DCD /* Register[请求] */,
 				24739A011D34F10C00094DCD /* Other */,
@@ -234,6 +242,9 @@
 			children = (
 				247132061D363D67005491A1 /* FoodViewController.h */,
 				247132071D363D67005491A1 /* FoodViewController.m */,
+				247F63B71D38D41A008D45B1 /* recommendTableViewCell.h */,
+				247F63B81D38D41A008D45B1 /* recommendTableViewCell.m */,
+				247F63B91D38D41A008D45B1 /* recommendTableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -575,11 +586,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247F63BB1D38D41A008D45B1 /* recommendTableViewCell.xib in Resources */,
 				247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */,
 				247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */,
 				D687AC091D3871B6008D68F7 /* FisrtTableViewCell.xib in Resources */,
 				247399DC1D34ED3F00094DCD /* Assets.xcassets in Resources */,
 				247399D71D34ED3F00094DCD /* Main.storyboard in Resources */,
+				247F63BD1D38D6B9008D45B1 /* 4967922_4641_1000x500.jpg in Resources */,
 				247131B31D35DEA3005491A1 /* ren.jpg in Resources */,
 				247131B11D35D5E5005491A1 /* myImage.png in Resources */,
 			);
@@ -664,6 +677,7 @@
 				247399DA1D34ED3F00094DCD /* Foodie.xcdatamodeld in Sources */,
 				24D33C2B1D37CE8100D6F765 /* TAAnimatedDotView.m in Sources */,
 				24D33C331D37CE8100D6F765 /* SDImageCache.m in Sources */,
+				247F63BA1D38D41A008D45B1 /* recommendTableViewCell.m in Sources */,
 				24D33C361D37CE8100D6F765 /* SDWebImageDownloader.m in Sources */,
 				247399D11D34ED3F00094DCD /* AppDelegate.m in Sources */,
 				24D33C301D37CE8100D6F765 /* UIView+SDExtension.m in Sources */,
