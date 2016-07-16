@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="46" y="189"/>
         </scene>
-        <!--View Controller-->
+        <!--食话-->
         <scene sceneID="NNv-US-12E">
             <objects>
-                <viewController id="SYd-l9-HdK" sceneMemberID="viewController">
+                <viewController id="SYd-l9-HdK" customClass="CommentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ot3-H1-FDn"/>
                         <viewControllerLayoutGuide type="bottom" id="fH0-PR-IgN"/>
@@ -197,14 +197,29 @@
                     <view key="view" contentMode="scaleToFill" id="xP0-vC-l1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KtX-xq-HGT">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="fH0-PR-IgN" firstAttribute="top" secondItem="KtX-xq-HGT" secondAttribute="bottom" id="7lX-8B-yz9"/>
+                            <constraint firstItem="KtX-xq-HGT" firstAttribute="leading" secondItem="xP0-vC-l1f" secondAttribute="leading" id="J5n-EP-YfK"/>
+                            <constraint firstAttribute="trailing" secondItem="KtX-xq-HGT" secondAttribute="trailing" id="YLR-9L-amM"/>
+                            <constraint firstItem="KtX-xq-HGT" firstAttribute="top" secondItem="Ot3-H1-FDn" secondAttribute="bottom" id="cpG-8p-1TY"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6Xt-26-NYz"/>
+                    <navigationItem key="navigationItem" title="食话" id="6Xt-26-NYz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="commentTableView" destination="KtX-xq-HGT" id="fAW-qq-QB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydu-cg-ECb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179" y="333"/>
+            <point key="canvasLocation" x="592" y="189"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="3be-9w-XeN">
