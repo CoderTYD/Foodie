@@ -9,13 +9,17 @@
 #import "FoodViewController.h"
 #import "SDCycleScrollView.h"
 #import "recommendTableViewCell.h"
+#import "LikeCollectionViewCell.h"
 @interface FoodViewController ()
 <
     SDCycleScrollViewDelegate,
     UITableViewDataSource,
-    UITableViewDelegate
-
+    UITableViewDelegate,
+    UICollectionViewDataSource,
+    UICollectionViewDelegate,
+    UICollectionViewDelegateFlowLayout
 >
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 //轮播图地图
 @property (strong, nonatomic) IBOutlet UIView *foodView;
@@ -24,29 +28,49 @@
 //背景图
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundView;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewHeightLayout;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation FoodViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    [self guessYouLikeCollectionView];
+    //设置代理
     self.recommendTableView.delegate = self;
     self.recommendTableView.dataSource = self;
+    
+    //设置代理人
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    
+ 
 
+    //注册cell
     [self.recommendTableView registerNib:[UINib nibWithNibName:@"recommendTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:recommendTableViewCell_Identifier];
+    //注册 collectionViewCell
+//    [self.collectionView registerClass:[LikeCollectionViewCell class] forCellWithReuseIdentifier:LikeCollectionViewCell_Identifler];
+    
+//    [self.collectionView registerClass:[LikeCollectionViewCell class] forCellWithReuseIdentifier:@"LikeCollectionViewCell"];
+
+    [self.collectionView registerNib:[UINib nibWithNibName:@"LikeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"tyd"];
+
     
     [self headCarouselView];
-    
+//    [self guessYouLikeCollectionView];
+//    [self addAllViews];
 }
 
 
 
-//轮播图
+#pragma mark ---轮播图
 - (void)headCarouselView{
     
     self.foodView.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:0.99];
-    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"005.jpg"]];
+//    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"005.jpg"]];
     _backgroundView.frame = self.view.bounds;
     [self.foodView addSubview:_backgroundView];
     
@@ -57,16 +81,15 @@
     
     // 情景二：采用网络图片实现
     NSArray *imagesURLStrings = @[
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
+                                  @"http://img.netbian.com/file/2016/0219/182d174c52cc87d642025bbce00d8a89.jpg",
+                                  @"http://img.netbian.com/file/20150511/2322e08bdd901e7352b41e8edd539442.jpg",
+                                  @"http://img.netbian.com/file/2015/0718/775843254d7ea03c6d52633075dc14b9.jpg"
                                   ];
     
     // 情景三：图片配文字
-    NSArray *titles = @[@"新建交流QQ群：185534916 ",
-                        @"感谢您的支持，如果下载的",
-                        @"如果代码在使用过程中出现问题",
-                        @"您可以发邮件到gsdios@126.com"
+    NSArray *titles = @[@"所有叉烧，通通都到碗里来",
+                        @"酸甜可口营养丰富奶酪蓝莓挞",
+                        @"啃着吃，才过瘾！",
                         ];
     
     
@@ -88,6 +111,9 @@
     
     
 }
+
+
+
 //轮播图点击方法
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
@@ -98,13 +124,13 @@
 //cell的高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 150;
+    return 170;
 }
 //cell 的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
-    return 4;
+    return 3;
 }
 
 //返回 cell
@@ -112,14 +138,49 @@
     
     recommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTableViewCell_Identifier forIndexPath:indexPath];
     
+    if (indexPath.row == 0) {
+        cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-0.png"];
+        
+    }else if (indexPath.row == 1){
     
-    
+        cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-1.png"];
+ 
+    }else if (indexPath.row == 2){
+        
+        cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-2.png"];
+ 
+        
+        
+    }
     return cell;
 }
 
 
 
+#pragma mark --- collectionView
 
+//cell 个数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    
+    return 30;
+}
+//返回cell
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    LikeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tyd" forIndexPath:indexPath];
+    return cell;
+    
+}
+
+// 设置 scrollView 高度
+-(void)updateViewConstraints{
+    [super updateViewConstraints];
+    
+    self.viewHeightLayout.constant = CGRectGetMaxY(self.collectionView.frame) +100;
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

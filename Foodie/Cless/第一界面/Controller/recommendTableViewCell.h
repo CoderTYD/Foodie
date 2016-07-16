@@ -11,6 +11,14 @@
 #define recommendTableViewCell_Identifier @"recommendTableViewCell_Identifier"
 @interface recommendTableViewCell : UITableViewCell
 
+//背景图片
 @property (strong, nonatomic) IBOutlet UIImageView *cellBackImage;
+
+//大标题
+@property (strong, nonatomic) IBOutlet UILabel *bigLabel;
+
+//小标题
+@property (strong, nonatomic) IBOutlet UILabel *smallLabel;
+
 
 @end

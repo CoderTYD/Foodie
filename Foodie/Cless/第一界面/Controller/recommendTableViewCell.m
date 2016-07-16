@@ -15,6 +15,7 @@
     
     
     self.cellBackImage.layer.cornerRadius = 10.0;
+    self.cellBackImage.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
