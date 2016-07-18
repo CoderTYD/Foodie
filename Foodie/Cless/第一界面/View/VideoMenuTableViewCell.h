@@ -12,4 +12,13 @@
 
 @interface VideoMenuTableViewCell : UITableViewCell
 
+//头像
+@property (strong, nonatomic) IBOutlet UIImageView *headImageView;
+
+//视频截图
+@property (strong, nonatomic) IBOutlet UIImageView *imgVideo;
+
+
+
+
 @end

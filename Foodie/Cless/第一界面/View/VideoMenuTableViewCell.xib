@@ -22,6 +22,7 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oeg-XP-azH">
                         <rect key="frame" x="10" y="15" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="Yq8-i1-V8d"/>
                             <constraint firstAttribute="height" constant="30" id="z9e-c8-joX"/>
@@ -85,6 +86,10 @@
                     <constraint firstItem="18e-SB-z27" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zV7-Jr-d8H"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="headImageView" destination="Oeg-XP-azH" id="OB0-MH-VBh"/>
+                <outlet property="imgVideo" destination="18e-SB-z27" id="PVn-WW-ukc"/>
+            </connections>
             <point key="canvasLocation" x="366" y="319"/>
         </tableViewCell>
     </objects>
