@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C4CE5ED2111372CFA3D0FA5 /* libPods-Foodie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */; };
+		242373541D3C75800075AAB0 /* VideoMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242373531D3C75800075AAB0 /* VideoMenuViewController.m */; };
+		242373581D3CB47F0075AAB0 /* VideoMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 242373561D3CB47F0075AAB0 /* VideoMenuTableViewCell.m */; };
+		242373591D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242373571D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib */; };
 		247131AF1D35CDE3005491A1 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247131AE1D35CDE3005491A1 /* MyViewController.m */; };
 		247131B11D35D5E5005491A1 /* myImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 247131B01D35D5E5005491A1 /* myImage.png */; };
 		247131B31D35DEA3005491A1 /* ren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 247131B21D35DEA3005491A1 /* ren.jpg */; };
@@ -59,6 +62,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242373521D3C75800075AAB0 /* VideoMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMenuViewController.h; sourceTree = "<group>"; };
+		242373531D3C75800075AAB0 /* VideoMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMenuViewController.m; sourceTree = "<group>"; };
+		242373551D3CB47F0075AAB0 /* VideoMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMenuTableViewCell.h; sourceTree = "<group>"; };
+		242373561D3CB47F0075AAB0 /* VideoMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMenuTableViewCell.m; sourceTree = "<group>"; };
+		242373571D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoMenuTableViewCell.xib; sourceTree = "<group>"; };
 		247131AD1D35CDE3005491A1 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		247131AE1D35CDE3005491A1 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		247131B01D35D5E5005491A1 /* myImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myImage.png; sourceTree = "<group>"; };
@@ -251,6 +259,8 @@
 			children = (
 				247132061D363D67005491A1 /* FoodViewController.h */,
 				247132071D363D67005491A1 /* FoodViewController.m */,
+				242373521D3C75800075AAB0 /* VideoMenuViewController.h */,
+				242373531D3C75800075AAB0 /* VideoMenuViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +288,9 @@
 				247F63BE1D38FAAD008D45B1 /* LikeCollectionViewCell.h */,
 				247F63BF1D38FAAD008D45B1 /* LikeCollectionViewCell.m */,
 				247F63C01D38FAAD008D45B1 /* LikeCollectionViewCell.xib */,
+				242373551D3CB47F0075AAB0 /* VideoMenuTableViewCell.h */,
+				242373561D3CB47F0075AAB0 /* VideoMenuTableViewCell.m */,
+				242373571D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -597,6 +610,7 @@
 			files = (
 				247F63BB1D38D41A008D45B1 /* recommendTableViewCell.xib in Resources */,
 				24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */,
+				242373591D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib in Resources */,
 				247F63C21D38FAAD008D45B1 /* LikeCollectionViewCell.xib in Resources */,
 				247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */,
 				247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */,
@@ -681,6 +695,7 @@
 				247131AF1D35CDE3005491A1 /* MyViewController.m in Sources */,
 				24739A101D35036700094DCD /* RootViewController.m in Sources */,
 				24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */,
+				242373541D3C75800075AAB0 /* VideoMenuViewController.m in Sources */,
 				24D33C3B1D37CE8100D6F765 /* UIImage+GIF.m in Sources */,
 				24D33C3D1D37CE8100D6F765 /* UIImage+WebP.m in Sources */,
 				24D33C321D37CE8100D6F765 /* NSData+ImageContentType.m in Sources */,
@@ -688,6 +703,7 @@
 				247399DA1D34ED3F00094DCD /* Foodie.xcdatamodeld in Sources */,
 				24D33C2B1D37CE8100D6F765 /* TAAnimatedDotView.m in Sources */,
 				247F63C11D38FAAD008D45B1 /* LikeCollectionViewCell.m in Sources */,
+				242373581D3CB47F0075AAB0 /* VideoMenuTableViewCell.m in Sources */,
 				24D33C331D37CE8100D6F765 /* SDImageCache.m in Sources */,
 				247F63BA1D38D41A008D45B1 /* recommendTableViewCell.m in Sources */,
 				24D33C361D37CE8100D6F765 /* SDWebImageDownloader.m in Sources */,

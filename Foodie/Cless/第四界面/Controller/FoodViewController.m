@@ -10,6 +10,7 @@
 #import "SDCycleScrollView.h"
 #import "recommendTableViewCell.h"
 #import "LikeCollectionViewCell.h"
+#import "VideoMenuViewController.h"
 @interface FoodViewController ()
 <
     SDCycleScrollViewDelegate,
@@ -31,6 +32,12 @@
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewHeightLayout;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
+@property (strong, nonatomic) IBOutlet UIButton *videoButton;
+
+
+
+
+
 @end
 
 @implementation FoodViewController
@@ -38,7 +45,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self guessYouLikeCollectionView];
+
     //设置代理
     self.recommendTableView.delegate = self;
     self.recommendTableView.dataSource = self;
@@ -47,34 +54,26 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
- 
+
+    
 
     //注册cell
     [self.recommendTableView registerNib:[UINib nibWithNibName:@"recommendTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:recommendTableViewCell_Identifier];
     //注册 collectionViewCell
-//    [self.collectionView registerClass:[LikeCollectionViewCell class] forCellWithReuseIdentifier:LikeCollectionViewCell_Identifler];
-    
-//    [self.collectionView registerClass:[LikeCollectionViewCell class] forCellWithReuseIdentifier:@"LikeCollectionViewCell"];
-
     [self.collectionView registerNib:[UINib nibWithNibName:@"LikeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"tyd"];
 
     
     [self headCarouselView];
-//    [self guessYouLikeCollectionView];
-//    [self addAllViews];
 }
 
 
 
 #pragma mark ---轮播图
 - (void)headCarouselView{
-    
+
     self.foodView.backgroundColor = [UIColor colorWithRed:0.98 green:0.98 blue:0.98 alpha:0.99];
-//    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"005.jpg"]];
-    _backgroundView.frame = self.view.bounds;
-    [self.foodView addSubview:_backgroundView];
     
-    UIScrollView *demoContainerView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    UIScrollView *demoContainerView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, WindownWidth, 200)];
     demoContainerView.contentSize = CGSizeMake(self.view.frame.size.width, 200);
     [self.foodView addSubview:demoContainerView];
     
@@ -112,6 +111,33 @@
     
 }
 
+//视频菜谱
+- (IBAction)videoMenuButtonClick:(id)sender {
+    
+    
+    NSLog(@"视频菜谱");
+    
+    //跳转到登录界面
+    UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    VideoMenuViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"VideoMenuViewController"];
+    //模态样式
+    loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController:loginVC animated:YES completion:^{
+        
+        
+    }];
+    
+    
+    //跳转到视频菜谱界面
+    VideoMenuViewController *videoVC = [[VideoMenuViewController alloc]init];
+    
+    [self.navigationController pushViewController:videoVC animated:YES];
+
+}
+
+
 
 
 //轮播图点击方法
@@ -139,6 +165,7 @@
     recommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTableViewCell_Identifier forIndexPath:indexPath];
     
     if (indexPath.row == 0) {
+        
         cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-0.png"];
         
     }else if (indexPath.row == 1){
@@ -149,7 +176,6 @@
         
         cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-2.png"];
  
-        
         
     }
     return cell;
