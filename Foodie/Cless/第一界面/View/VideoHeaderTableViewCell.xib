@@ -14,50 +14,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R1-rO-joY">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R1-rO-joY">
                         <rect key="frame" x="182" y="65" width="50" height="50"/>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Fli-GF-o3S"/>
                             <constraint firstAttribute="height" constant="50" id="uJe-xW-zbx"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button" image="20160620173605_584"/>
                         <connections>
                             <action selector="buttonC:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="PL6-6Z-gLx"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-Ik-pW9">
-                        <rect key="frame" x="344" y="65" width="50" height="50"/>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="2VZ-lt-oap"/>
-                            <constraint firstAttribute="width" constant="50" id="6pk-4L-uPb"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <connections>
-                            <action selector="buttonE:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Si8-tr-x9g"/>
-                        </connections>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-7Q-Jb0">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3b-7Q-Jb0">
                         <rect key="frame" x="267" y="65" width="50" height="50"/>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="HNU-eO-RMI"/>
                             <constraint firstAttribute="width" constant="50" id="z4Q-Lq-yDk"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button" image="20160620175436_534"/>
                         <connections>
                             <action selector="buttonD:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3qq-bq-y9c"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhN-Jf-XuE">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhN-Jf-XuE">
                         <rect key="frame" x="97" y="65" width="50" height="50"/>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="HGG-DK-vNQ"/>
                             <constraint firstAttribute="height" constant="50" id="SBR-qa-F1a"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button" image="20160620160935_432"/>
                         <connections>
                             <action selector="buttonB:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cHa-i8-bas"/>
                         </connections>
@@ -98,16 +83,26 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwm-HH-bZx">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwm-HH-bZx">
                         <rect key="frame" x="20" y="65" width="50" height="50"/>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="uGJ-zB-XWr"/>
                             <constraint firstAttribute="height" constant="50" id="yD6-Hn-QUf"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" image="20160620173215_913"/>
                         <connections>
                             <action selector="buttonA:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ghu-bq-HDl"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2s-Ik-pW9">
+                        <rect key="frame" x="344" y="65" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="2VZ-lt-oap"/>
+                            <constraint firstAttribute="width" constant="50" id="6pk-4L-uPb"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="20160629115054_553"/>
+                        <connections>
+                            <action selector="buttonE:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VaH-Nq-bLT"/>
                         </connections>
                     </button>
                 </subviews>
@@ -137,7 +132,14 @@
                     <constraint firstItem="2QV-57-pNP" firstAttribute="centerY" secondItem="UmK-9e-C7N" secondAttribute="centerY" id="w68-TV-wxn"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="375" y="266"/>
+            <point key="canvasLocation" x="636" y="470"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="20160620160935_432" width="310" height="310"/>
+        <image name="20160620173215_913" width="302" height="297"/>
+        <image name="20160620173605_584" width="322" height="321"/>
+        <image name="20160620175436_534" width="358" height="360"/>
+        <image name="20160629115054_553" width="110" height="110"/>
+    </resources>
 </document>

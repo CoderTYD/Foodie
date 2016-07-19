@@ -10,15 +10,19 @@
 
 #define VideoHeaderTableViewCell_Identifler @"VideoHeaderTableViewCell_Identifler"
 
-@protocol pushDelegate <NSObject>
 
--(void)push;
+@protocol buttonClicked <NSObject>
+-(void)videoRecommandRequest:(NSString*)ID;
+
 
 @end
 
 @interface VideoHeaderTableViewCell : UITableViewCell
 
-@property(nonatomic,weak)id<pushDelegate>delegate;
+@property(nonatomic,weak)id<buttonClicked>delegate;
+
+
+
 
 
 @end

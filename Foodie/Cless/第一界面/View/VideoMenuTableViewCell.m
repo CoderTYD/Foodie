@@ -15,10 +15,25 @@
     self.headImageView.layer.cornerRadius = self.headImageView.frame.size.width / 2;
     
     self.imgVideo.layer.cornerRadius = 10.0;
+    self.imgVideo.layer.masksToBounds = YES;
 
 
 
 }
+
+-(void)setModel:(VideoMenuModel *)model{
+    
+    _model = model;
+    
+    [self.headImageView setImageWithURL:[NSURL URLWithString:model.img]];
+    self.nameLabel.text = model.name;
+    [self.imgVideo setImageWithURL:[NSURL URLWithString:model.img_video]];
+    self.describtionLabel.text = model.describtion;
+    self.timeLabel.text = model.time;
+    self.playTimesLabel.text = model.play_times;
+    
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

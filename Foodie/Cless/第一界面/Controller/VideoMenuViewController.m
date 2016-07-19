@@ -11,17 +11,20 @@
 #import "VideoHeaderTableViewCell.h"
 #import "VideoWedViewController.h"
 #import "VideoRecommandViewController.h"
+#import "VideoMenuRequest.h"
+#import "VideoMenuModel.h"
 @interface VideoMenuViewController ()
 <
     UITableViewDelegate,
     UITableViewDataSource,
-pushDelegate
+buttonClicked
 >
 
 //
 @property (strong, nonatomic) IBOutlet UITableView *videoTableView;
 
 
+@property (strong, nonatomic)NSMutableArray *videoMenuArray;
 
 @end
 
@@ -41,7 +44,36 @@ pushDelegate
     [self.videoTableView registerNib:[UINib nibWithNibName:@"VideoMenuTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VideoMenuTableViewCell_Identifler];
     [self.videoTableView registerNib:[UINib nibWithNibName:@"VideoHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VideoHeaderTableViewCell_Identifler];
     
+    [self videoRequest];
     
+}
+//数据请求
+- (void)videoRequest{
+    
+
+    self.videoMenuArray = [NSMutableArray array];
+    
+    VideoMenuRequest *request = [[VideoMenuRequest alloc]init];
+    
+    [request videoMenuRequestWithParameter:nil success:^(NSDictionary *dic) {
+       
+        NSArray *array = dic[@"obj"][@"video_list"];
+        for (NSDictionary *tempDic in array) {
+            VideoMenuModel *model = [VideoMenuModel new];
+            [model setValuesForKeysWithDictionary:tempDic];
+            [self.videoMenuArray addObject:model];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.videoTableView reloadData];
+            });
+        }
+        
+        NSLog(@"%@",self.videoMenuArray);
+    } failure:^(NSError *error) {
+        
+        NSLog(@"%@",error);
+    }];
     
 }
 
@@ -50,7 +82,7 @@ pushDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
-    return 5;
+    return self.videoMenuArray.count -1;
     
 }
 
@@ -93,14 +125,18 @@ pushDelegate
     }else{
         
         VideoMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VideoMenuTableViewCell_Identifler forIndexPath:indexPath];
+        
+        VideoMenuModel *model = self.videoMenuArray[indexPath.row];
+        cell.model = model;
         return cell;
     }
     
 }
 
--(void)push{
+-(void)videoRecommandRequest:(NSString*)string{
     UIStoryboard*sb=[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     VideoRecommandViewController *RecommandVC = [sb instantiateViewControllerWithIdentifier:@"VideoRecommandViewController"];
+    RecommandVC.modelID = string;
     [self.navigationController pushViewController:RecommandVC animated:YES];
 }
 

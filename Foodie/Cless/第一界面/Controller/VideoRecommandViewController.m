@@ -10,12 +10,19 @@
 #import "VideoDetailHeaderTableViewCell.h"
 #import "VideoMenuTableViewCell.h"
 #import "VideoHeaderTableViewCell.h"
+#import "VideoMenuModel.h"
+#import "VideoGourmetRequest.h"
+#import "VideoDetailTableViewCell.h"
 @interface VideoRecommandViewController ()
 <
     UITableViewDataSource,
-    UITableViewDelegate
+    UITableViewDelegate,
+buttonClicked
 >
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *videoRecommandArray;
+
+@property (nonatomic, strong) VideoMenuModel *model;
 
 @end
 
@@ -26,18 +33,59 @@
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
 
-    //注册 ce gt6ll
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    //注册 cell
     [self.tableView registerNib:[UINib nibWithNibName:@"VideoDetailHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VideoDetailHeaderTableViewCell_Identifier];
-    [self.tableView registerNib:[UINib nibWithNibName:@"VideoMenuTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VideoMenuTableViewCell_Identifler];
+
+    [self.tableView registerNib:[UINib nibWithNibName:@"VideoDetailTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VideoDetailTableViewCell_Identifier];
     
-    
+    [self videoRecommandRequest:self.modelID];
 }
 
+//数据请求
+- (void)videoRecommandRequest:(NSString *)ID{
+    
+    self.videoRecommandArray = [NSMutableArray array];
+    
+    VideoGourmetRequest *request = [[VideoGourmetRequest alloc]init];
+    
+    
+    __weak typeof (self) weakSelf = self;
+    
+    [request videoGourmetRequestWithParameter:@{@"id":ID} success:^(NSDictionary *dic) {
+        
+        NSLog(@"%@",dic);
+        NSString *string1 = dic[@"obj"][@"describtion"];
+         NSString *string2 = dic[@"obj"][@"img"];
+         NSString *string3 = dic[@"obj"][@"name"];
+        NSArray *array  = dic[@"obj"][@"video_list"];
+        
+        for (NSDictionary *tempDic in array) {
+            
+            VideoMenuModel *model = [[VideoMenuModel alloc]init];
+            [model setValuesForKeysWithDictionary:tempDic];
+            model.headTitle =string1;
+            model.headImg = string2;
+            model.HeadName = string3;
+            [weakSelf.videoRecommandArray addObject:model];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [weakSelf.tableView reloadData];
+            });
+        }
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"%@",error);
+    }];
+
+}
 //cell 个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 5;
+    return self.videoRecommandArray.count -1;
 }
 //cell 高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -56,11 +104,18 @@
     if (indexPath.row == 0) {
         
         VideoDetailHeaderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VideoDetailHeaderTableViewCell_Identifier forIndexPath:indexPath];
+        VideoMenuModel *model = self.videoRecommandArray[indexPath.row];
+        cell.model = model;
+
         return cell;
         
     }else{
         
-        VideoMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VideoMenuTableViewCell_Identifler forIndexPath:indexPath];
+        VideoDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VideoDetailTableViewCell_Identifier forIndexPath:indexPath];
+        
+        VideoMenuModel *model = self.videoRecommandArray[indexPath.row];
+        cell.model = model;
+      
     return cell;
     }
     

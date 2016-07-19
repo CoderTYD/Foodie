@@ -48,7 +48,8 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     
-    
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+
     
     [manager POST:url  parameters:parameterDic progress:^(NSProgress * _Nonnull uploadProgress) {
         

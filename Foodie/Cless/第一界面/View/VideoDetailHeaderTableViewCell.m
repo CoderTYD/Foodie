@@ -18,6 +18,19 @@
 
 }
 
+-(void)setModel:(VideoMenuModel *)model{
+    _model = model;
+    
+    
+    [self.headImageView setImageWithURL:[NSURL URLWithString:model.headImg]];
+    
+    self.describtion.text = model.headTitle;
+    
+    
+    
+    
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

@@ -10,4 +10,6 @@
 
 @interface VideoRecommandViewController : UIViewController
 
+@property(nonatomic,strong)NSString *modelID;
+
 @end
