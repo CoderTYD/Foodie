@@ -27,17 +27,19 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 
+    //注册 ce gt6ll
     [self.tableView registerNib:[UINib nibWithNibName:@"VideoDetailHeaderTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VideoDetailHeaderTableViewCell_Identifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"VideoMenuTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:VideoMenuTableViewCell_Identifler];
     
     
 }
 
+//cell 个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return 5;
 }
-
+//cell 高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
@@ -48,12 +50,14 @@
         return 250;
     }
 }
+//返回 cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row == 0) {
         
         VideoDetailHeaderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VideoDetailHeaderTableViewCell_Identifier forIndexPath:indexPath];
         return cell;
+        
     }else{
         
         VideoMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VideoMenuTableViewCell_Identifler forIndexPath:indexPath];
@@ -62,6 +66,7 @@
     
 }
 
+//点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
