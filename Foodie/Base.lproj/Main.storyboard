@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6f6-mt-Ixm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6f6-mt-Ixm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -296,6 +296,9 @@
                                                         <state key="normal" image="caishi">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="Pu3-xV-dcE" kind="push" id="dUb-je-abS"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="菜谱分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gre-H4-UI7">
                                                         <rect key="frame" x="36" y="75" width="64" height="20"/>
@@ -440,6 +443,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUY-OT-1V8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="610" y="-717"/>
+        </scene>
+        <!--Cooking View Controller-->
+        <scene sceneID="gPm-g9-tyL">
+            <objects>
+                <viewController id="Pu3-xV-dcE" customClass="CookingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y3a-3c-PQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="sWf-xB-TO1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K5E-RY-VR3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tzy-UE-PPq">
+                                <rect key="frame" x="0.0" y="64" width="100" height="623"/>
+                                <color key="backgroundColor" red="1" green="0.80825844680000003" blue="0.93808703439999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HnD-bG-BU0"/>
+                                </constraints>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GNk-BW-Us1">
+                                <rect key="frame" x="100" y="64" width="314" height="623"/>
+                                <color key="backgroundColor" red="0.40185112620000002" green="0.77888972410000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tzy-UE-PPq" firstAttribute="top" secondItem="Y3a-3c-PQ6" secondAttribute="bottom" id="0Fg-tb-Oq6"/>
+                            <constraint firstItem="GNk-BW-Us1" firstAttribute="leading" secondItem="Tzy-UE-PPq" secondAttribute="trailing" id="40G-fB-Sbm"/>
+                            <constraint firstAttribute="trailing" secondItem="GNk-BW-Us1" secondAttribute="trailing" id="EbK-eq-77W"/>
+                            <constraint firstItem="Tzy-UE-PPq" firstAttribute="leading" secondItem="K5E-RY-VR3" secondAttribute="leading" id="N6m-LM-CQj"/>
+                            <constraint firstItem="GNk-BW-Us1" firstAttribute="top" secondItem="Y3a-3c-PQ6" secondAttribute="bottom" id="Oxh-NJ-h9P"/>
+                            <constraint firstItem="sWf-xB-TO1" firstAttribute="top" secondItem="GNk-BW-Us1" secondAttribute="bottom" id="RSo-I4-tha"/>
+                            <constraint firstItem="sWf-xB-TO1" firstAttribute="top" secondItem="Tzy-UE-PPq" secondAttribute="bottom" id="vce-Vk-KUk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yMT-2s-OnE"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkm-yw-qio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="-197"/>
         </scene>
         <!--Video Menu View Controller-->
         <scene sceneID="upE-5o-dd1">
