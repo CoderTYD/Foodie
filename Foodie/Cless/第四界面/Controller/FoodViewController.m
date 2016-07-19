@@ -117,23 +117,14 @@
     
     NSLog(@"视频菜谱");
     
-    //跳转到登录界面
+//    //跳转到登录界面
     UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
     VideoMenuViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"VideoMenuViewController"];
     //模态样式
     loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-    [self presentViewController:loginVC animated:YES completion:^{
-        
-        
-    }];
-    
-    
-    //跳转到视频菜谱界面
-    VideoMenuViewController *videoVC = [[VideoMenuViewController alloc]init];
-    
-    [self.navigationController pushViewController:videoVC animated:YES];
+    [self.navigationController pushViewController:loginVC animated:YES];
 
 }
 
