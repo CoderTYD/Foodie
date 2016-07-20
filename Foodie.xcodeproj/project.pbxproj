@@ -351,24 +351,8 @@
 				247F63BE1D38FAAD008D45B1 /* LikeCollectionViewCell.h */,
 				247F63BF1D38FAAD008D45B1 /* LikeCollectionViewCell.m */,
 				247F63C01D38FAAD008D45B1 /* LikeCollectionViewCell.xib */,
-				242373551D3CB47F0075AAB0 /* VideoMenuTableViewCell.h */,
-				242373561D3CB47F0075AAB0 /* VideoMenuTableViewCell.m */,
-				242373571D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib */,
-				2423735A1D3CDF760075AAB0 /* VideoHeaderTableViewCell.h */,
-				2423735B1D3CDF760075AAB0 /* VideoHeaderTableViewCell.m */,
-				2423735C1D3CDF760075AAB0 /* VideoHeaderTableViewCell.xib */,
-				242373621D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.h */,
-				242373631D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.m */,
-				242373641D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.xib */,
-				24907E1F1D3E4208006F2B57 /* VideoDetailTableViewCell.h */,
-				24907E201D3E4208006F2B57 /* VideoDetailTableViewCell.m */,
-				24907E211D3E4208006F2B57 /* VideoDetailTableViewCell.xib */,
-				D65BF32B1D3F0B1F0075CC63 /* HeadlineTableViewCell.h */,
-				D65BF32C1D3F0B1F0075CC63 /* HeadlineTableViewCell.m */,
-				D65BF32D1D3F0B1F0075CC63 /* HeadlineTableViewCell.xib */,
-				D65BF3301D3F0B340075CC63 /* SubtitleTableViewCell.h */,
-				D65BF3311D3F0B340075CC63 /* SubtitleTableViewCell.m */,
-				D65BF3321D3F0B340075CC63 /* SubtitleTableViewCell.xib */,
+				24B91B911D3F13C60082F79C /* video */,
+				24B91B931D3F13F20082F79C /* menu */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +512,38 @@
 				24739A0A1D34F42E00094DCD /* PrefixHeader.pch */,
 			);
 			name = "工具";
+			sourceTree = "<group>";
+		};
+		24B91B911D3F13C60082F79C /* video */ = {
+			isa = PBXGroup;
+			children = (
+				242373551D3CB47F0075AAB0 /* VideoMenuTableViewCell.h */,
+				242373561D3CB47F0075AAB0 /* VideoMenuTableViewCell.m */,
+				242373571D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib */,
+				2423735A1D3CDF760075AAB0 /* VideoHeaderTableViewCell.h */,
+				2423735B1D3CDF760075AAB0 /* VideoHeaderTableViewCell.m */,
+				2423735C1D3CDF760075AAB0 /* VideoHeaderTableViewCell.xib */,
+				242373621D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.h */,
+				242373631D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.m */,
+				242373641D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.xib */,
+				24907E1F1D3E4208006F2B57 /* VideoDetailTableViewCell.h */,
+				24907E201D3E4208006F2B57 /* VideoDetailTableViewCell.m */,
+				24907E211D3E4208006F2B57 /* VideoDetailTableViewCell.xib */,
+			);
+			name = video;
+			sourceTree = "<group>";
+		};
+		24B91B931D3F13F20082F79C /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				D65BF32B1D3F0B1F0075CC63 /* HeadlineTableViewCell.h */,
+				D65BF32C1D3F0B1F0075CC63 /* HeadlineTableViewCell.m */,
+				D65BF32D1D3F0B1F0075CC63 /* HeadlineTableViewCell.xib */,
+				D65BF3301D3F0B340075CC63 /* SubtitleTableViewCell.h */,
+				D65BF3311D3F0B340075CC63 /* SubtitleTableViewCell.m */,
+				D65BF3321D3F0B340075CC63 /* SubtitleTableViewCell.xib */,
+			);
+			name = menu;
 			sourceTree = "<group>";
 		};
 		24D33BF71D37CE8100D6F765 /* Lib */ = {
