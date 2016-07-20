@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface HeadlineTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *imageV;
+
+
 
 @end

@@ -11,7 +11,8 @@
 @implementation HeadlineTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+
+    [self reloadInputViews];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
