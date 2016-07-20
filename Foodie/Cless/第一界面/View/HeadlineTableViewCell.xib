@@ -14,25 +14,32 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwG-9c-CoK">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="Button"/>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="家常做法" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-WA-AH6">
-                        <rect key="frame" x="16" y="63" width="68" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家常做法" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-WA-AH6">
+                        <rect key="frame" x="16" y="70" width="68" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1BK-Cf-W3k">
+                        <rect key="frame" x="25" y="12" width="50" height="50"/>
+                    </imageView>
                 </subviews>
+                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.80008081896551719" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="CwG-9c-CoK" secondAttribute="trailing" id="PtJ-nj-LJa"/>
-                    <constraint firstItem="CwG-9c-CoK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RwQ-YW-ZHq"/>
-                    <constraint firstItem="CwG-9c-CoK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TH7-qu-OZ1"/>
-                    <constraint firstAttribute="bottom" secondItem="CwG-9c-CoK" secondAttribute="bottom" id="eFU-WT-eFf"/>
+                    <constraint firstAttribute="trailing" secondItem="ZMn-WA-AH6" secondAttribute="trailing" constant="16" id="4eg-lg-F3L"/>
+                    <constraint firstAttribute="bottom" secondItem="ZMn-WA-AH6" secondAttribute="bottom" constant="8" id="Am0-Bc-Jxw"/>
+                    <constraint firstItem="ZMn-WA-AH6" firstAttribute="top" secondItem="1BK-Cf-W3k" secondAttribute="bottom" constant="8" id="FEw-vz-cLe"/>
+                    <constraint firstItem="1BK-Cf-W3k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="FlB-UF-sDD"/>
+                    <constraint firstAttribute="trailing" secondItem="1BK-Cf-W3k" secondAttribute="trailing" constant="25" id="Jv7-QB-2ql"/>
+                    <constraint firstItem="ZMn-WA-AH6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="70" id="T90-49-1eP"/>
+                    <constraint firstItem="ZMn-WA-AH6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="csE-99-NrK"/>
+                    <constraint firstItem="1BK-Cf-W3k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="pFO-hs-MmT"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imageV" destination="1BK-Cf-W3k" id="dy1-c0-Y6j"/>
+                <outlet property="titleLabel" destination="ZMn-WA-AH6" id="F7x-H9-937"/>
+            </connections>
             <point key="canvasLocation" x="265" y="288"/>
         </tableViewCell>
     </objects>
