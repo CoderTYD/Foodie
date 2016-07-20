@@ -71,6 +71,13 @@
 		24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941831D3A492000D38EF6 /* QQ20160716-0.png */; };
 		24D941871D3A4B8F00D38EF6 /* QQ20160716-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941851D3A4B8F00D38EF6 /* QQ20160716-2.png */; };
 		24D941881D3A4B8F00D38EF6 /* QQ20160716-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941861D3A4B8F00D38EF6 /* QQ20160716-1.png */; };
+		D69B76081D3DCD06005D015E /* CookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D69B76071D3DCD06005D015E /* CookingViewController.m */; };
+		D69B760C1D3DCEFA005D015E /* HeadlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69B760A1D3DCEFA005D015E /* HeadlineTableViewCell.m */; };
+		D69B760D1D3DCEFA005D015E /* HeadlineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69B760B1D3DCEFA005D015E /* HeadlineTableViewCell.xib */; };
+		D69B76111D3DCF86005D015E /* SubtitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D69B760F1D3DCF86005D015E /* SubtitleTableViewCell.m */; };
+		D69B76121D3DCF86005D015E /* SubtitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69B76101D3DCF86005D015E /* SubtitleTableViewCell.xib */; };
+		D69B76141D3DD146005D015E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69B76131D3DD146005D015E /* 1.jpg */; };
+		D69B76161D3DD184005D015E /* 3622_287351.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D69B76151D3DD184005D015E /* 3622_287351.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +198,16 @@
 		6A1E6D64A6E66718E880A338 /* Pods-Foodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.debug.xcconfig"; sourceTree = "<group>"; };
 		859F2700D1932442456B998E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69B76061D3DCD06005D015E /* CookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingViewController.h; sourceTree = "<group>"; };
+		D69B76071D3DCD06005D015E /* CookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingViewController.m; sourceTree = "<group>"; };
+		D69B76091D3DCEFA005D015E /* HeadlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlineTableViewCell.h; sourceTree = "<group>"; };
+		D69B760A1D3DCEFA005D015E /* HeadlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlineTableViewCell.m; sourceTree = "<group>"; };
+		D69B760B1D3DCEFA005D015E /* HeadlineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadlineTableViewCell.xib; sourceTree = "<group>"; };
+		D69B760E1D3DCF86005D015E /* SubtitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtitleTableViewCell.h; sourceTree = "<group>"; };
+		D69B760F1D3DCF86005D015E /* SubtitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtitleTableViewCell.m; sourceTree = "<group>"; };
+		D69B76101D3DCF86005D015E /* SubtitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubtitleTableViewCell.xib; sourceTree = "<group>"; };
+		D69B76131D3DD146005D015E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		D69B76151D3DD184005D015E /* 3622_287351.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3622_287351.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +284,8 @@
 		247399E61D34EF2500094DCD /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				D69B76151D3DD184005D015E /* 3622_287351.jpg */,
+				D69B76131D3DD146005D015E /* 1.jpg */,
 				247399E71D34EF2500094DCD /* 第一界面 */,
 				247399F11D34EF2500094DCD /* 第二界面 */,
 				247399EC1D34EF2500094DCD /* 第三界面 */,
@@ -298,6 +317,8 @@
 				242373601D3CF1E40075AAB0 /* VideoWedViewController.m */,
 				242373671D3D01A20075AAB0 /* VideoRecommandViewController.h */,
 				242373681D3D01A20075AAB0 /* VideoRecommandViewController.m */,
+				D69B76061D3DCD06005D015E /* CookingViewController.h */,
+				D69B76071D3DCD06005D015E /* CookingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,9 +363,18 @@
 				242373621D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.h */,
 				242373631D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.m */,
 				242373641D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.xib */,
+<<<<<<< HEAD
 				24907E1F1D3E4208006F2B57 /* VideoDetailTableViewCell.h */,
 				24907E201D3E4208006F2B57 /* VideoDetailTableViewCell.m */,
 				24907E211D3E4208006F2B57 /* VideoDetailTableViewCell.xib */,
+=======
+				D69B76091D3DCEFA005D015E /* HeadlineTableViewCell.h */,
+				D69B760A1D3DCEFA005D015E /* HeadlineTableViewCell.m */,
+				D69B760B1D3DCEFA005D015E /* HeadlineTableViewCell.xib */,
+				D69B760E1D3DCF86005D015E /* SubtitleTableViewCell.h */,
+				D69B760F1D3DCF86005D015E /* SubtitleTableViewCell.m */,
+				D69B76101D3DCF86005D015E /* SubtitleTableViewCell.xib */,
+>>>>>>> 22416a1470d97d3c82a523882d53bd5660ee8162
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -664,11 +694,14 @@
 			files = (
 				247F63BB1D38D41A008D45B1 /* recommendTableViewCell.xib in Resources */,
 				24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */,
+				D69B76161D3DD184005D015E /* 3622_287351.jpg in Resources */,
 				242373591D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib in Resources */,
 				247F63C21D38FAAD008D45B1 /* LikeCollectionViewCell.xib in Resources */,
 				247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */,
 				247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */,
 				242373661D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.xib in Resources */,
+				D69B760D1D3DCEFA005D015E /* HeadlineTableViewCell.xib in Resources */,
+				D69B76121D3DCF86005D015E /* SubtitleTableViewCell.xib in Resources */,
 				24D941821D3A3A2900D38EF6 /* changjianshicai@2x.png in Resources */,
 				24D941871D3A4B8F00D38EF6 /* QQ20160716-2.png in Resources */,
 				247399DC1D34ED3F00094DCD /* Assets.xcassets in Resources */,
@@ -676,6 +709,7 @@
 				24D941881D3A4B8F00D38EF6 /* QQ20160716-1.png in Resources */,
 				2423735E1D3CDF760075AAB0 /* VideoHeaderTableViewCell.xib in Resources */,
 				247399D71D34ED3F00094DCD /* Main.storyboard in Resources */,
+				D69B76141D3DD146005D015E /* 1.jpg in Resources */,
 				247131B31D35DEA3005491A1 /* ren.jpg in Resources */,
 				247131B11D35D5E5005491A1 /* myImage.png in Resources */,
 			);
@@ -736,6 +770,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69B76081D3DCD06005D015E /* CookingViewController.m in Sources */,
 				24D33C401D37CE8100D6F765 /* UIView+WebCacheOperation.m in Sources */,
 				2423735D1D3CDF760075AAB0 /* VideoHeaderTableViewCell.m in Sources */,
 				247132081D363D67005491A1 /* FoodViewController.m in Sources */,
@@ -746,6 +781,7 @@
 				24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */,
 				24D33C381D37CE8100D6F765 /* SDWebImageManager.m in Sources */,
 				242373611D3CF1E40075AAB0 /* VideoWedViewController.m in Sources */,
+				D69B76111D3DCF86005D015E /* SubtitleTableViewCell.m in Sources */,
 				24D33C351D37CE8100D6F765 /* SDWebImageDecoder.m in Sources */,
 				242373651D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.m in Sources */,
 				24739A071D34F22A00094DCD /* BaseRequest.m in Sources */,
@@ -774,6 +810,7 @@
 				24D33C361D37CE8100D6F765 /* SDWebImageDownloader.m in Sources */,
 				247399D11D34ED3F00094DCD /* AppDelegate.m in Sources */,
 				24D33C301D37CE8100D6F765 /* UIView+SDExtension.m in Sources */,
+				D69B760C1D3DCEFA005D015E /* HeadlineTableViewCell.m in Sources */,
 				24D33C3C1D37CE8100D6F765 /* UIImage+MultiFormat.m in Sources */,
 				24D33C3A1D37CE8100D6F765 /* UIButton+WebCache.m in Sources */,
 				247399CE1D34ED3F00094DCD /* main.m in Sources */,

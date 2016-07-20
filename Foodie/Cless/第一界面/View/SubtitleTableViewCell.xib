@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="SubtitleTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="314" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="双口金针菇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-PL-Dft">
+                        <rect key="frame" x="136" y="4" width="161" height="27"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="VZ9-w4-Oba"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="橄榄油 适量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Web-Yf-p1Q">
+                        <rect key="frame" x="136" y="39" width="161" height="21"/>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="NDj-MR-fSz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3622_287351.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Not-LA-eAt">
+                        <rect key="frame" x="8" y="4" width="120" height="113"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="IaC-b0-bf9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夏天了,心情烦躁也没有食欲,这时候如果有清凉爽口的小菜该多好" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNV-F7-ixQ">
+                        <rect key="frame" x="136" y="68" width="161" height="45"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aNV-F7-ixQ" firstAttribute="top" secondItem="Web-Yf-p1Q" secondAttribute="bottom" constant="8" symbolic="YES" id="AQv-z1-rkM"/>
+                    <constraint firstItem="Not-LA-eAt" firstAttribute="top" secondItem="Ugg-PL-Dft" secondAttribute="top" id="AcH-CO-FHE"/>
+                    <constraint firstItem="Not-LA-eAt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="OWA-St-ZgF"/>
+                    <constraint firstItem="Web-Yf-p1Q" firstAttribute="top" secondItem="Ugg-PL-Dft" secondAttribute="bottom" constant="8" symbolic="YES" id="QhO-H9-7vf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="aNV-F7-ixQ" secondAttribute="bottom" constant="-2" id="Wv7-jR-EQh"/>
+                    <constraint firstItem="Web-Yf-p1Q" firstAttribute="trailing" secondItem="aNV-F7-ixQ" secondAttribute="trailing" id="bNg-yI-KXy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ugg-PL-Dft" secondAttribute="trailing" constant="9" id="dbt-AF-MqR"/>
+                    <constraint firstItem="Ugg-PL-Dft" firstAttribute="leading" secondItem="Not-LA-eAt" secondAttribute="trailing" constant="8" symbolic="YES" id="hu9-hJ-zsY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Not-LA-eAt" secondAttribute="bottom" constant="-6" id="iy0-mG-zSu"/>
+                    <constraint firstItem="Not-LA-eAt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="viY-eg-fRP"/>
+                    <constraint firstItem="Ugg-PL-Dft" firstAttribute="trailing" secondItem="Web-Yf-p1Q" secondAttribute="trailing" id="xA8-x4-Snz"/>
+                    <constraint firstItem="Web-Yf-p1Q" firstAttribute="leading" secondItem="Ugg-PL-Dft" secondAttribute="leading" id="xzX-cK-yfl"/>
+                    <constraint firstItem="aNV-F7-ixQ" firstAttribute="leading" secondItem="Web-Yf-p1Q" secondAttribute="leading" id="zEG-XM-uIP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="318" y="322"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="3622_287351.jpg" width="230" height="230"/>
+    </resources>
+</document>
