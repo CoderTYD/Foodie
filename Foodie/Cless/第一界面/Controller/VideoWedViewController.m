@@ -30,7 +30,9 @@
     
     
    self.webV = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:self.vurlString]];
+    
+    NSLog(@"%@",self.vurlString);
     [self.view addSubview: self.webV];
     [self.webV loadRequest:request];
 }

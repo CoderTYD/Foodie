@@ -132,7 +132,7 @@
                     <constraint firstItem="2QV-57-pNP" firstAttribute="centerY" secondItem="UmK-9e-C7N" secondAttribute="centerY" id="w68-TV-wxn"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="636" y="470"/>
+            <point key="canvasLocation" x="766" y="608"/>
         </tableViewCell>
     </objects>
     <resources>

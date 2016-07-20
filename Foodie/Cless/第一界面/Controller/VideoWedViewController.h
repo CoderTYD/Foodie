@@ -10,4 +10,7 @@
 
 @interface VideoWedViewController : UIViewController
 
+//视频网址
+@property (nonatomic, copy) NSString *vurlString;
+
 @end

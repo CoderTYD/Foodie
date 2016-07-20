@@ -13,6 +13,7 @@
 #import "VideoMenuModel.h"
 #import "VideoGourmetRequest.h"
 #import "VideoDetailTableViewCell.h"
+#import "VideoWedViewController.h"
 @interface VideoRecommandViewController ()
 <
     UITableViewDataSource,
@@ -58,8 +59,8 @@ buttonClicked
         
         NSLog(@"%@",dic);
         NSString *string1 = dic[@"obj"][@"describtion"];
-         NSString *string2 = dic[@"obj"][@"img"];
-         NSString *string3 = dic[@"obj"][@"name"];
+        NSString *string2 = dic[@"obj"][@"img"];
+        NSString *string3 = dic[@"obj"][@"name"];
         NSArray *array  = dic[@"obj"][@"video_list"];
         
         for (NSDictionary *tempDic in array) {
@@ -82,6 +83,17 @@ buttonClicked
     }];
 
 }
+
+
+-(void)setIntroductionText:(NSString*)text{
+    
+    
+
+    
+}
+
+
+
 //cell 个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
@@ -94,6 +106,9 @@ buttonClicked
     if (indexPath.row == 0) {
         
         return 150;
+        
+        
+     
     }else{
         return 250;
     }
@@ -124,6 +139,10 @@ buttonClicked
 //点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    VideoWedViewController *webVC = [[VideoWedViewController alloc]init];
+    VideoMenuModel *model = self.videoRecommandArray[indexPath.row];
+    webVC.vurlString = model.vurl;
+    [self.navigationController pushViewController:webVC animated:YES];
     
 }
 
