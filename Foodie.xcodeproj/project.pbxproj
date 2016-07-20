@@ -44,6 +44,8 @@
 		24907E1E1D3E23B9006F2B57 /* VideoGourmetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24907E1D1D3E23B9006F2B57 /* VideoGourmetRequest.m */; };
 		24907E221D3E4208006F2B57 /* VideoDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24907E201D3E4208006F2B57 /* VideoDetailTableViewCell.m */; };
 		24907E231D3E4208006F2B57 /* VideoDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24907E211D3E4208006F2B57 /* VideoDetailTableViewCell.xib */; };
+		24B91B961D3F63FA0082F79C /* LikeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B91B951D3F63FA0082F79C /* LikeModel.m */; };
+		24B91B991D3F646D0082F79C /* LickRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B91B981D3F646D0082F79C /* LickRequest.m */; };
 		24D33C2A1D37CE8100D6F765 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33BFB1D37CE8100D6F765 /* TAAbstractDotView.m */; };
 		24D33C2B1D37CE8100D6F765 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33BFD1D37CE8100D6F765 /* TAAnimatedDotView.m */; };
 		24D33C2C1D37CE8100D6F765 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D33BFF1D37CE8100D6F765 /* TADotView.m */; };
@@ -143,6 +145,10 @@
 		24907E1F1D3E4208006F2B57 /* VideoDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailTableViewCell.h; sourceTree = "<group>"; };
 		24907E201D3E4208006F2B57 /* VideoDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailTableViewCell.m; sourceTree = "<group>"; };
 		24907E211D3E4208006F2B57 /* VideoDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDetailTableViewCell.xib; sourceTree = "<group>"; };
+		24B91B941D3F63FA0082F79C /* LikeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeModel.h; sourceTree = "<group>"; };
+		24B91B951D3F63FA0082F79C /* LikeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeModel.m; sourceTree = "<group>"; };
+		24B91B971D3F646D0082F79C /* LickRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LickRequest.h; sourceTree = "<group>"; };
+		24B91B981D3F646D0082F79C /* LickRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LickRequest.m; sourceTree = "<group>"; };
 		24D33BFA1D37CE8100D6F765 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
 		24D33BFB1D37CE8100D6F765 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
 		24D33BFC1D37CE8100D6F765 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
@@ -327,6 +333,8 @@
 				24907E141D3E0720006F2B57 /* BaseModel.m */,
 				24907E161D3E074A006F2B57 /* VideoMenuModel.h */,
 				24907E171D3E074A006F2B57 /* VideoMenuModel.m */,
+				24B91B941D3F63FA0082F79C /* LikeModel.h */,
+				24B91B951D3F63FA0082F79C /* LikeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +346,8 @@
 				24907E1A1D3E09AA006F2B57 /* VideoMenuRequest.m */,
 				24907E1C1D3E23B9006F2B57 /* VideoGourmetRequest.h */,
 				24907E1D1D3E23B9006F2B57 /* VideoGourmetRequest.m */,
+				24B91B971D3F646D0082F79C /* LickRequest.h */,
+				24B91B981D3F646D0082F79C /* LickRequest.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -779,6 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B91B961D3F63FA0082F79C /* LikeModel.m in Sources */,
 				24D33C401D37CE8100D6F765 /* UIView+WebCacheOperation.m in Sources */,
 				2423735D1D3CDF760075AAB0 /* VideoHeaderTableViewCell.m in Sources */,
 				247132081D363D67005491A1 /* FoodViewController.m in Sources */,
@@ -826,6 +837,7 @@
 				24D33C311D37CE8100D6F765 /* MKAnnotationView+WebCache.m in Sources */,
 				24907E1E1D3E23B9006F2B57 /* VideoGourmetRequest.m in Sources */,
 				24D33C371D37CE8100D6F765 /* SDWebImageDownloaderOperation.m in Sources */,
+				24B91B991D3F646D0082F79C /* LickRequest.m in Sources */,
 				247131B81D35E1F9005491A1 /* MyTableViewCell.m in Sources */,
 				24D33C2E1D37CE8100D6F765 /* SDCollectionViewCell.m in Sources */,
 				24D33C2F1D37CE8100D6F765 /* SDCycleScrollView.m in Sources */,

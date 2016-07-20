@@ -34,8 +34,13 @@
 
 
 
-
 //初始化方法:根据 items
 - (id)initWithItems:(NSArray *)items frame:(CGRect)frame;
+
+
+
+
+
+
 
 @end

@@ -11,6 +11,9 @@
 #import "recommendTableViewCell.h"
 #import "LikeCollectionViewCell.h"
 #import "VideoMenuViewController.h"
+#import "VideoWedViewController.h"
+#import "LikeModel.h"
+#import "LickRequest.h"
 @interface FoodViewController ()
 <
     SDCycleScrollViewDelegate,
@@ -21,28 +24,34 @@
     UICollectionViewDelegateFlowLayout
 >
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-
 //轮播图地图
 @property (strong, nonatomic) IBOutlet UIView *foodView;
 //今日推荐
 @property (strong, nonatomic) IBOutlet UITableView *recommendTableView;
-//背景图
-@property (strong, nonatomic) IBOutlet UIImageView *backgroundView;
-
+//view 高度约束
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *viewHeightLayout;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-
+//视频点击按钮
 @property (strong, nonatomic) IBOutlet UIButton *videoButton;
 
-
-
-
+//最热商品
+@property(strong, nonatomic)NSArray *bigLabel;
+@property(strong, nonatomic)NSArray *smallLabel;
+@property(strong, nonatomic)NSArray *imageArray;
+@property(strong, nonatomic)NSArray *webArray;
+//解析数组
+@property(strong, nonatomic)NSMutableArray *likeArray;
 
 @end
 
 @implementation FoodViewController
 
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    //
+    RootViewController *vc = (RootViewController *)self.navigationController.parentViewController;
+    [vc showTabBar];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -56,13 +65,13 @@
     
 
     
-
     //注册cell
     [self.recommendTableView registerNib:[UINib nibWithNibName:@"recommendTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:recommendTableViewCell_Identifier];
     //注册 collectionViewCell
     [self.collectionView registerNib:[UINib nibWithNibName:@"LikeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"tyd"];
 
-    
+    [self likeDataRequest];
+
     [self headCarouselView];
 }
 
@@ -111,6 +120,37 @@
     
 }
 
+//数据请求
+- (void)likeDataRequest{
+    
+    self.likeArray  = [NSMutableArray array];
+    
+    LickRequest * request = [[LickRequest alloc]init];
+    
+    __weak typeof(self) weakSelf = self;
+    [request likeRequestWithParameter:nil success:^(NSDictionary *dic) {
+        NSLog(@"like -> %@",dic);
+        
+        NSArray *array = dic[@"obj"][@"data"];
+        for (NSDictionary * tempDic in array) {
+            LikeModel *model = [[LikeModel alloc]init];
+            [model setValuesForKeysWithDictionary:tempDic];
+            [weakSelf.likeArray addObject:model];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [weakSelf.collectionView reloadData];
+            });
+            
+        }
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"like -> %@",error);
+    }];
+    
+}
+
 //视频菜谱
 - (IBAction)videoMenuButtonClick:(id)sender {
     
@@ -154,22 +194,26 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     recommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:recommendTableViewCell_Identifier forIndexPath:indexPath];
+  
+    cell.bigLabel.text = self.bigLabel[indexPath.row];
+    cell.smallLabel.text = self.smallLabel[indexPath.row];
+    cell.cellBackImage.image = [UIImage imageNamed:self.imageArray[indexPath.row]];
     
-    if (indexPath.row == 0) {
-        
-        cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-0.png"];
-        
-    }else if (indexPath.row == 1){
-    
-        cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-1.png"];
- 
-    }else if (indexPath.row == 2){
-        
-        cell.cellBackImage.image = [UIImage imageNamed:@"QQ20160716-2.png"];
- 
-        
-    }
     return cell;
+}
+//cell 跳转
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"%@",self.parentViewController);
+    VideoWedViewController *wedVC = [[VideoWedViewController alloc]init];
+    
+    wedVC.vurlString = self.webArray[indexPath.row];
+    RootViewController *vc = (RootViewController *)self.navigationController.parentViewController;
+    
+    [vc hideTabBar];
+    
+    [self.navigationController pushViewController:wedVC animated:YES];
+    
 }
 
 
@@ -180,15 +224,21 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
     
-    return 30;
+    return self.likeArray.count;
 }
 //返回cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     LikeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"tyd" forIndexPath:indexPath];
+    
+    LikeModel *model = self.likeArray[indexPath.row];
+    cell.model = model;
+    
     return cell;
     
 }
+
+
 
 // 设置 scrollView 高度
 -(void)updateViewConstraints{
@@ -198,6 +248,45 @@
     
     
 }
+
+
+#pragma make -懒加载
+    
+- (NSArray *)bigLabel{
+        
+        if (!_bigLabel) {
+            _bigLabel = @[@"吃货or饭桶",@"初伏温度要爆表",@"夏日特饮缤纷Menu"];
+        }
+        return _bigLabel;
+    }
+    
+- (NSArray *)smallLabel{
+    if (!_smallLabel) {
+        
+        _smallLabel = @[@"够胆来测!看看你是几星吃货",@"桑拿模式即将开始",@"约起来姐妹茶点 patrty"];
+    }
+    return _smallLabel;
+}
+- (NSArray *)imageArray{
+    if (!_imageArray) {
+        
+        _imageArray = @[@"QQ20160716-0",@"QQ20160716-1",@"QQ20160716-2"];
+    }
+    return _imageArray;
+}
+
+- (NSArray *)webArray{
+    if (!_webArray) {
+        
+        _webArray = @[
+                      @"http://m.meishij.net/huodong/zt.php?zt_id=173&un=meishi_14688091154545%40meishijauto.com&pw=e1a1f801419a8eff7fcdb78339e69dc3",
+                      @"http://m.meishij.net/huodong.php?hd=chufu2015&un=meishi_14688091154545%40meishijauto.com&pw=e1a1f801419a8eff7fcdb78339e69dc3",
+                      @"http://m.meishij.net/huodong/zt.php?zt_id=181&un=meishi_14688091154545%40meishijauto.com&pw=e1a1f801419a8eff7fcdb78339e69dc3"
+                      ];
+    }
+    return _webArray;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

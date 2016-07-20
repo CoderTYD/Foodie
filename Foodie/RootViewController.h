@@ -12,4 +12,7 @@
 
 @interface RootViewController : UITabBarController
 
+
+- (void)showTabBar;
+- (void)hideTabBar;
 @end

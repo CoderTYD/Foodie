@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LikeModel.h"
 //#define LikeCollectionViewCell_Identify @"LikeCollectionViewCell_Identify"
 
 @interface LikeCollectionViewCell : UICollectionViewCell
@@ -16,5 +16,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *bgImageView;
 //标题
 @property (strong, nonatomic) IBOutlet UILabel *titleLable;
+
+//
+@property (nonatomic, strong)LikeModel *model;
 
 @end

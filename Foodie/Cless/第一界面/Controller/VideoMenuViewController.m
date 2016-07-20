@@ -17,7 +17,7 @@
 <
     UITableViewDelegate,
     UITableViewDataSource,
-buttonClicked
+    buttonClicked
 >
 
 //
@@ -71,7 +71,6 @@ buttonClicked
         
         NSLog(@"%@",self.videoMenuArray);
     } failure:^(NSError *error) {
-        
         NSLog(@"%@",error);
     }];
     
@@ -100,17 +99,21 @@ buttonClicked
   
 }
 
+//跳转到
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.row) {
         
         VideoWedViewController *webVC = [[VideoWedViewController alloc]init];
-        
+        VideoMenuModel *model = self.videoMenuArray[indexPath.row];
+        webVC.vurlString = model.vurl;
+
         [self.navigationController pushViewController:webVC animated:YES];
         
     }
     
 }
+
 
 //返回cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

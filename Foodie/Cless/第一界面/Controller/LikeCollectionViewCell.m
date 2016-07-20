@@ -18,4 +18,12 @@
 
 }
 
+-(void)setModel:(LikeModel *)model{
+    
+    _model = model;
+    [self.bgImageView setImageWithURL:[NSURL URLWithString:model.titlepic]];
+    self.titleLable.text = model.title;
+    
+}
+
 @end

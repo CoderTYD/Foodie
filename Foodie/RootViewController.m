@@ -18,6 +18,15 @@
 @implementation RootViewController
 
 
+- (void)showTabBar{
+    self.dbTabBar.hidden = NO;
+}
+
+- (void)hideTabBar{
+    self.dbTabBar.hidden = YES;
+}
+
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.tabBar.hidden = YES;
