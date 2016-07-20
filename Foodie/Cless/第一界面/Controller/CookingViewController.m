@@ -7,8 +7,12 @@
 //
 
 #import "CookingViewController.h"
+#import "HeadlineTableViewCell.h"
+#import "SubtitleTableViewCell.h"
 
 @interface CookingViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *headlineTV;
+@property (strong, nonatomic) IBOutlet UITableView *subtitleTV;
 
 @end
 
@@ -17,6 +21,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.headlineTV registerNib:[UINib nibWithNibName:@"HeadlineTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cell1"];
+    [self.subtitleTV registerNib:[UINib nibWithNibName:@"SubtitleTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cell2"];
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (tableView == self.headlineTV) {
+        return 7;
+    }else {
+        return 10;
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.headlineTV) {
+        return 100;
+    }else {
+        return 120;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    HeadlineTableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
+    SubtitleTableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"cell2"];
+    
+    if (tableView == self.headlineTV) {
+        return cell1;
+    }else {
+        return cell2;
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
