@@ -9,5 +9,19 @@
 #import "LikeModel.h"
 
 @implementation LikeModel
+-(NSString *)description{
+    
+    return [NSString stringWithFormat:@"ID -> %@",self.ID];
+}
 
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    
+    if ([key isEqualToString:@"id"]) {
+        _ID = value;
+        
+    }
+    
+    
+}
 @end

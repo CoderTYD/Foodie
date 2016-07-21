@@ -14,13 +14,31 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - HyphenateSDK (3.1.4)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.1.9)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - HyphenateSDK (from `https://github.com/easemob/hyphenate-cocoapods.git`)
+  - MBProgressHUD
+  - MJRefresh
+
+EXTERNAL SOURCES:
+  HyphenateSDK:
+    :git: https://github.com/easemob/hyphenate-cocoapods.git
+
+CHECKOUT OPTIONS:
+  HyphenateSDK:
+    :commit: 60f3ba7b8ba3f467339a2104e4a1cc2513a6b5eb
+    :git: https://github.com/easemob/hyphenate-cocoapods.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HyphenateSDK: 8c0a3610dc9f26fae8b38be52f219f10ef7a09a8
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
 
-PODFILE CHECKSUM: 5051f81a9b34675a8a7e49927015dc3e2e25174b
+PODFILE CHECKSUM: dd810f3264c076bcef87dd3e6de3eb42a2cb05cf
 
 COCOAPODS: 1.0.1

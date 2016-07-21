@@ -131,7 +131,7 @@
     [request likeRequestWithParameter:nil success:^(NSDictionary *dic) {
         NSLog(@"like -> %@",dic);
         
-        NSArray *array = dic[@"obj"][@"data"];
+        NSArray *array = dic[@"obj"][@"customized"][@"data"];
         for (NSDictionary * tempDic in array) {
             LikeModel *model = [[LikeModel alloc]init];
             [model setValuesForKeysWithDictionary:tempDic];
