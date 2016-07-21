@@ -73,6 +73,11 @@
 		24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941831D3A492000D38EF6 /* QQ20160716-0.png */; };
 		24D941871D3A4B8F00D38EF6 /* QQ20160716-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941851D3A4B8F00D38EF6 /* QQ20160716-2.png */; };
 		24D941881D3A4B8F00D38EF6 /* QQ20160716-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941861D3A4B8F00D38EF6 /* QQ20160716-1.png */; };
+		D633E48B1D406A4400552E29 /* CookingStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E48A1D406A4400552E29 /* CookingStepViewController.m */; };
+		D633E48D1D406DC900552E29 /* 1949_126930.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D633E48C1D406DC900552E29 /* 1949_126930.jpg */; };
+		D633E4911D40B77C00552E29 /* CookingStepTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E48F1D40B77C00552E29 /* CookingStepTableViewCell.m */; };
+		D633E4921D40B77C00552E29 /* CookingStepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D633E4901D40B77C00552E29 /* CookingStepTableViewCell.xib */; };
+		D633E4941D40B9C400552E29 /* 2073_5baf67dd8d73e022.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D633E4931D40B9C400552E29 /* 2073_5baf67dd8d73e022.jpg */; };
 		D65BF32A1D3F0AC30075CC63 /* CookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BF3291D3F0AC30075CC63 /* CookingViewController.m */; };
 		D65BF32E1D3F0B1F0075CC63 /* HeadlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65BF32C1D3F0B1F0075CC63 /* HeadlineTableViewCell.m */; };
 		D65BF32F1D3F0B1F0075CC63 /* HeadlineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D65BF32D1D3F0B1F0075CC63 /* HeadlineTableViewCell.xib */; };
@@ -217,6 +222,13 @@
 		6A1E6D64A6E66718E880A338 /* Pods-Foodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.debug.xcconfig"; sourceTree = "<group>"; };
 		859F2700D1932442456B998E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D633E4891D406A4400552E29 /* CookingStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingStepViewController.h; sourceTree = "<group>"; };
+		D633E48A1D406A4400552E29 /* CookingStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingStepViewController.m; sourceTree = "<group>"; };
+		D633E48C1D406DC900552E29 /* 1949_126930.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1949_126930.jpg; path = HeadImage/1949_126930.jpg; sourceTree = "<group>"; };
+		D633E48E1D40B77C00552E29 /* CookingStepTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingStepTableViewCell.h; sourceTree = "<group>"; };
+		D633E48F1D40B77C00552E29 /* CookingStepTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingStepTableViewCell.m; sourceTree = "<group>"; };
+		D633E4901D40B77C00552E29 /* CookingStepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookingStepTableViewCell.xib; sourceTree = "<group>"; };
+		D633E4931D40B9C400552E29 /* 2073_5baf67dd8d73e022.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2073_5baf67dd8d73e022.jpg; sourceTree = "<group>"; };
 		D65BF3281D3F0AC30075CC63 /* CookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingViewController.h; sourceTree = "<group>"; };
 		D65BF3291D3F0AC30075CC63 /* CookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingViewController.m; sourceTree = "<group>"; };
 		D65BF32B1D3F0B1F0075CC63 /* HeadlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlineTableViewCell.h; sourceTree = "<group>"; };
@@ -288,8 +300,10 @@
 				D65BF3371D3F66330075CC63 /* HeadImage */,
 				D65BF3351D3F0C0D0075CC63 /* 3622_287351.jpg */,
 				247131B21D35DEA3005491A1 /* ren.jpg */,
+				D633E48C1D406DC900552E29 /* 1949_126930.jpg */,
 				24D941831D3A492000D38EF6 /* QQ20160716-0.png */,
 				24D941851D3A4B8F00D38EF6 /* QQ20160716-2.png */,
+				D633E4931D40B9C400552E29 /* 2073_5baf67dd8d73e022.jpg */,
 				24D941861D3A4B8F00D38EF6 /* QQ20160716-1.png */,
 				247399E61D34EF2500094DCD /* Class */,
 				24739A021D34F1D800094DCD /* Register[请求] */,
@@ -351,6 +365,8 @@
 				242373681D3D01A20075AAB0 /* VideoRecommandViewController.m */,
 				D65BF3281D3F0AC30075CC63 /* CookingViewController.h */,
 				D65BF3291D3F0AC30075CC63 /* CookingViewController.m */,
+				D633E4891D406A4400552E29 /* CookingStepViewController.h */,
+				D633E48A1D406A4400552E29 /* CookingStepViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -581,6 +597,9 @@
 				D65BF3301D3F0B340075CC63 /* SubtitleTableViewCell.h */,
 				D65BF3311D3F0B340075CC63 /* SubtitleTableViewCell.m */,
 				D65BF3321D3F0B340075CC63 /* SubtitleTableViewCell.xib */,
+				D633E48E1D40B77C00552E29 /* CookingStepTableViewCell.h */,
+				D633E48F1D40B77C00552E29 /* CookingStepTableViewCell.m */,
+				D633E4901D40B77C00552E29 /* CookingStepTableViewCell.xib */,
 			);
 			name = menu;
 			sourceTree = "<group>";
@@ -790,9 +809,12 @@
 				2423735E1D3CDF760075AAB0 /* VideoHeaderTableViewCell.xib in Resources */,
 				247399D71D34ED3F00094DCD /* Main.storyboard in Resources */,
 				247131B31D35DEA3005491A1 /* ren.jpg in Resources */,
+				D633E4921D40B77C00552E29 /* CookingStepTableViewCell.xib in Resources */,
 				D65BF3471D3F66330075CC63 /* 02.png in Resources */,
+				D633E48D1D406DC900552E29 /* 1949_126930.jpg in Resources */,
 				D65BF3341D3F0B340075CC63 /* SubtitleTableViewCell.xib in Resources */,
 				D65BF3491D3F66330075CC63 /* 04.png in Resources */,
+				D633E4941D40B9C400552E29 /* 2073_5baf67dd8d73e022.jpg in Resources */,
 				247131B11D35D5E5005491A1 /* myImage.png in Resources */,
 				D65BF32F1D3F0B1F0075CC63 /* HeadlineTableViewCell.xib in Resources */,
 			);
@@ -873,8 +895,10 @@
 				24907E181D3E074A006F2B57 /* VideoMenuModel.m in Sources */,
 				247131AF1D35CDE3005491A1 /* MyViewController.m in Sources */,
 				242373691D3D01A20075AAB0 /* VideoRecommandViewController.m in Sources */,
+				D633E4911D40B77C00552E29 /* CookingStepTableViewCell.m in Sources */,
 				24907E151D3E0720006F2B57 /* BaseModel.m in Sources */,
 				24907E1B1D3E09AA006F2B57 /* VideoMenuRequest.m in Sources */,
+				D633E48B1D406A4400552E29 /* CookingStepViewController.m in Sources */,
 				24739A101D35036700094DCD /* RootViewController.m in Sources */,
 				24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */,
 				242373541D3C75800075AAB0 /* VideoMenuViewController.m in Sources */,
@@ -1017,6 +1041,7 @@
 			baseConfigurationReference = 6A1E6D64A6E66718E880A338 /* Pods-Foodie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Foodie/PrefixHeader.pch";
 				INFOPLIST_FILE = Foodie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1030,6 +1055,7 @@
 			baseConfigurationReference = 859F2700D1932442456B998E /* Pods-Foodie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Foodie/PrefixHeader.pch";
 				INFOPLIST_FILE = Foodie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

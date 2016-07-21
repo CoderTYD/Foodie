@@ -9,7 +9,7 @@
 #import "CookingViewController.h"
 #import "HeadlineTableViewCell.h"
 #import "SubtitleTableViewCell.h"
-
+#import "CookingStepViewController.h"
 
 @interface CookingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *headlineTV;
@@ -19,6 +19,7 @@
 @property(nonatomic,strong)NSArray *foodListArray;
 @property(nonatomic,strong)NSArray *whiteArray;
 @property(nonatomic,strong)NSArray *redArray;
+
 
 @end
 
@@ -128,6 +129,14 @@
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     HeadlineTableViewCell*cell = [self.headlineTV cellForRowAtIndexPath:indexPath];
     cell.imageV.image = [UIImage imageNamed:self.redArray[indexPath.row]];
+    
+//    跳转
+    if (tableView == self.subtitleTV) {
+        [self performSegueWithIdentifier:@"pusCookingStep" sender:nil];
+    }
+    
+    
+    
 }
 
 -(void)requestSubtitleContent:(NSString*)string{
