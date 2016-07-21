@@ -495,7 +495,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="390-eA-p9z">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1949_126930.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7Mo-qH-Z3D">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
@@ -548,9 +548,13 @@
                                                     <constraint firstAttribute="height" constant="20" id="s5D-tj-f1l"/>
                                                 </constraints>
                                             </imageView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qkQ-4d-EDG">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qkQ-4d-EDG" userLabel="cookingStepTV">
                                                 <rect key="frame" x="13" y="558" width="388" height="342"/>
                                                 <color key="backgroundColor" red="0.68233089449999995" green="0.4115588168" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Dlm-vw-1aN" id="zAU-1R-Dtn"/>
+                                                    <outlet property="delegate" destination="Dlm-vw-1aN" id="rjB-t5-Bex"/>
+                                                </connections>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="步骤与贴士" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjj-49-NSt">
                                                 <rect key="frame" x="31" y="528" width="85" height="20"/>
@@ -566,7 +570,6 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="7Mo-qH-Z3D" secondAttribute="trailing" id="35x-Hp-7kA"/>
-                                            <constraint firstAttribute="height" constant="900" id="3Sy-Px-r0g"/>
                                             <constraint firstAttribute="trailing" secondItem="1Qk-hw-pSB" secondAttribute="trailing" constant="13" id="8tv-Sh-2O6"/>
                                             <constraint firstItem="1Qk-hw-pSB" firstAttribute="leading" secondItem="390-eA-p9z" secondAttribute="leading" constant="13" id="9XL-ad-drT"/>
                                             <constraint firstItem="7Mo-qH-Z3D" firstAttribute="leading" secondItem="390-eA-p9z" secondAttribute="leading" id="A0e-TK-Wfo"/>
@@ -577,6 +580,7 @@
                                             <constraint firstItem="1Qk-hw-pSB" firstAttribute="leading" secondItem="390-eA-p9z" secondAttribute="leading" constant="13" id="Xah-BK-BVD"/>
                                             <constraint firstItem="scR-BR-08c" firstAttribute="leading" secondItem="390-eA-p9z" secondAttribute="leading" constant="13" id="dMD-4I-Zai"/>
                                             <constraint firstItem="qkQ-4d-EDG" firstAttribute="leading" secondItem="390-eA-p9z" secondAttribute="leading" constant="13" id="fvz-rG-U5Y"/>
+                                            <constraint firstAttribute="height" constant="1000" id="h6l-y4-8iK"/>
                                             <constraint firstItem="LkO-fG-q0Q" firstAttribute="top" secondItem="1Qk-hw-pSB" secondAttribute="bottom" constant="10" id="k6i-Vc-tZQ"/>
                                             <constraint firstItem="ccm-mE-rFz" firstAttribute="top" secondItem="7Mo-qH-Z3D" secondAttribute="bottom" constant="8" id="mMI-e6-Rrb"/>
                                             <constraint firstAttribute="trailing" secondItem="1Qk-hw-pSB" secondAttribute="trailing" constant="14" id="s3U-Dx-6Jz"/>
@@ -585,12 +589,14 @@
                                             <constraint firstItem="qaC-il-Olw" firstAttribute="top" secondItem="7Mo-qH-Z3D" secondAttribute="bottom" constant="40" id="wTE-FH-2xn"/>
                                             <constraint firstItem="ccm-mE-rFz" firstAttribute="centerX" secondItem="390-eA-p9z" secondAttribute="centerX" id="wZ8-L1-Xck"/>
                                             <constraint firstItem="scR-BR-08c" firstAttribute="top" secondItem="7Mo-qH-Z3D" secondAttribute="bottom" constant="39" id="y0u-wt-kDd"/>
+                                            <constraint firstAttribute="height" constant="5000" id="yNB-WU-UV9"/>
                                             <constraint firstItem="Zjj-49-NSt" firstAttribute="top" secondItem="1Qk-hw-pSB" secondAttribute="bottom" constant="10" id="zM7-Mb-nze"/>
                                             <constraint firstItem="7Mo-qH-Z3D" firstAttribute="top" secondItem="390-eA-p9z" secondAttribute="top" id="zeG-IW-peK"/>
                                             <constraint firstAttribute="bottom" secondItem="qkQ-4d-EDG" secondAttribute="bottom" id="zkO-Eh-Bbz"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
+                                                <exclude reference="yNB-WU-UV9"/>
                                                 <exclude reference="9XL-ad-drT"/>
                                                 <exclude reference="s3U-Dx-6Jz"/>
                                             </mask>
@@ -609,13 +615,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EAd-jS-ClO" firstAttribute="leading" secondItem="cyk-2z-8it" secondAttribute="leading" id="6wa-jQ-s9b"/>
-                            <constraint firstItem="EAd-jS-ClO" firstAttribute="top" secondItem="3c2-6I-S77" secondAttribute="bottom" id="WF4-UH-qmd"/>
-                            <constraint firstItem="WK9-6g-a1R" firstAttribute="top" secondItem="EAd-jS-ClO" secondAttribute="bottom" id="cIy-Hc-Bgo"/>
+                            <constraint firstItem="WK9-6g-a1R" firstAttribute="top" secondItem="EAd-jS-ClO" secondAttribute="bottom" id="UUi-J1-SyB"/>
                             <constraint firstAttribute="trailing" secondItem="EAd-jS-ClO" secondAttribute="trailing" id="sfK-m5-ErF"/>
+                            <constraint firstItem="EAd-jS-ClO" firstAttribute="top" secondItem="3c2-6I-S77" secondAttribute="bottom" id="slp-GO-C03"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6V6-jm-eJR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="albumsImage" destination="7Mo-qH-Z3D" id="RlE-X3-4Wj"/>
+                        <outlet property="cookingStepTV" destination="qkQ-4d-EDG" id="umv-fc-YBG"/>
+                        <outlet property="height" destination="yNB-WU-UV9" id="xp3-d5-gJ0"/>
+                        <outlet property="rootView" destination="390-eA-p9z" id="r3J-Z4-kHL"/>
+                        <outlet property="scrollView" destination="EAd-jS-ClO" id="aJJ-wT-Dmn"/>
+                        <outlet property="tableView" destination="qkQ-4d-EDG" id="rJW-cU-Yvg"/>
+                        <outlet property="tagsLabel" destination="1Qk-hw-pSB" id="SQo-sT-b29"/>
+                        <outlet property="titleLabel" destination="ccm-mE-rFz" id="eIX-pf-qsU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pi-wt-Z6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
