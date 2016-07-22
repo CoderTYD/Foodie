@@ -14,6 +14,8 @@
 #import "VideoWedViewController.h"
 #import "LikeModel.h"
 #import "LickRequest.h"
+#import "TasteViewController.h"
+
 @interface FoodViewController ()
 <
     SDCycleScrollViewDelegate,
@@ -129,7 +131,6 @@
     
     __weak typeof(self) weakSelf = self;
     [request likeRequestWithParameter:nil success:^(NSDictionary *dic) {
-        NSLog(@"like -> %@",dic);
         
         NSArray *array = dic[@"obj"][@"customized"][@"data"];
         for (NSDictionary * tempDic in array) {
@@ -168,7 +169,22 @@
 
 }
 
-
+//食趣
+- (IBAction)tasterButtonClick:(id)sender {
+    
+    
+    NSLog(@"食趣");
+    
+    //    //跳转到登录界面
+    UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    TasteViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"TasteViewController"];
+    //模态样式
+    loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self.navigationController pushViewController:loginVC animated:YES];
+    
+}
 
 
 //轮播图点击方法
