@@ -420,7 +420,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.8335907789" green="0.42961894740000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="D7I-eh-YS0" firstAttribute="top" secondItem="vhZ-TL-dRi" secondAttribute="bottom" id="Ljd-cD-go6"/>
                             <constraint firstItem="vhZ-TL-dRi" firstAttribute="top" secondItem="H8N-7N-mz2" secondAttribute="bottom" id="c4w-5W-tW3"/>
@@ -761,7 +761,7 @@
         <!--Message View Controller-->
         <scene sceneID="tjg-DA-RXK">
             <objects>
-                <viewController id="OSa-u1-htP" customClass="MessageViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="OSa-u1-htP" customClass="MessageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W36-3g-oUP"/>
                         <viewControllerLayoutGuide type="bottom" id="w83-JP-RQg"/>

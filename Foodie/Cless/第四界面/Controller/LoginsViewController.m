@@ -35,16 +35,27 @@
     EMError *error = [[EMClient sharedClient] loginWithUsername:self.userName.text password:self.passWord.text];
     
     if (!error) {
-        
-        NSLog(@"登录成功");
-        
-        [self dismissViewControllerAnimated:YES completion:^{
-            
-        }];
-        
+            [[EMClient sharedClient].options setIsAutoLogin:YES];
+            UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"登录成功!" preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                
+                [self dismissViewControllerAnimated:YES completion:^{
+                    
+                }];
+                
+            }];
+            [alertView addAction:okAction];
+            [self presentViewController:alertView animated:YES completion:nil];
+ 
     }else{
         
-        NSLog(@"登录失败");
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"登录失败" preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            
+            
+        }];
+        [alertView addAction:okAction];
+        [self presentViewController:alertView animated:YES completion:nil];
         
     }
     
@@ -78,6 +89,9 @@
     
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self resignFirstResponder];
+}
 
 
 /*

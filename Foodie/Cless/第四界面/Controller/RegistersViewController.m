@@ -36,26 +36,43 @@
     
     if (error==nil) {
         
+            UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"注册成功!" preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }];
+            [alertView addAction:okAction];
+            [self presentViewController:alertView animated:YES completion:nil];
+            
+        
+        
         NSLog(@"注册成功");
         //跳转到登录界面
-        UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        
-        LoginsViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"LoginsViewController"];
-        //模态样式
-        loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        
-        [self presentViewController:loginVC animated:YES completion:^{
-            
-            
-            
-        }];
-        
+//        UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//        
+//        LoginsViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"LoginsViewController"];
+//        //模态样式
+//        loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//        
+//        [self presentViewController:loginVC animated:YES completion:^{
+//            
+//            
+//            
+//        }];
+//        
 
         
         
     }else{
+        UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"提示" message:@"注册失败" preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [alertView addAction:okAction];
+        [self presentViewController:alertView animated:YES completion:nil];
         
-        NSLog(@"注册失败");
+//        NSLog(@"注册失败");
     }
     
 }
@@ -63,8 +80,7 @@
 //点击键盘上return后调用
 -(BOOL)textFieldShouldReturn:(UITextField*)textField{
     //隐藏键盘
-    [self.userName resignFirstResponder];
-    [self.passWord resignFirstResponder];
+    [textField resignFirstResponder];
 
     return YES;
 }
