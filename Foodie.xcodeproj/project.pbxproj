@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0C4CE5ED2111372CFA3D0FA5 /* libPods-Foodie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */; };
-		241CDF051D41BC2C008605D6 /* LoginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF021D41BC2C008605D6 /* LoginsViewController.m */; };
-		241CDF061D41BC2C008605D6 /* RegistersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF041D41BC2C008605D6 /* RegistersViewController.m */; };
 		241CDF101D420148008605D6 /* TasteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF0F1D420148008605D6 /* TasteViewController.m */; };
 		241CDF141D42015B008605D6 /* TasteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF121D42015B008605D6 /* TasteTableViewCell.m */; };
 		241CDF151D42015B008605D6 /* TasteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CDF131D42015B008605D6 /* TasteTableViewCell.xib */; };
@@ -81,6 +79,18 @@
 		24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941831D3A492000D38EF6 /* QQ20160716-0.png */; };
 		24D941871D3A4B8F00D38EF6 /* QQ20160716-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941851D3A4B8F00D38EF6 /* QQ20160716-2.png */; };
 		24D941881D3A4B8F00D38EF6 /* QQ20160716-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941861D3A4B8F00D38EF6 /* QQ20160716-1.png */; };
+		C1CDAD931D424A640070934E /* LoginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD8E1D424A640070934E /* LoginsViewController.m */; };
+		C1CDAD941D424A640070934E /* RegistersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD901D424A640070934E /* RegistersViewController.m */; };
+		C1CDAD951D424A640070934E /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD921D424A640070934E /* ChatViewController.m */; };
+		C1CDADA21D424A820070934E /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD971D424A820070934E /* MessageCell.m */; };
+		C1CDADA31D424A820070934E /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDAD981D424A820070934E /* MessageCell.xib */; };
+		C1CDADA41D424A820070934E /* AlternativeMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD9A1D424A820070934E /* AlternativeMessageCell.m */; };
+		C1CDADA51D424A820070934E /* AlternativeMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDAD9B1D424A820070934E /* AlternativeMessageCell.xib */; };
+		C1CDADA61D424A820070934E /* ImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD9D1D424A820070934E /* ImageMessageCell.m */; };
+		C1CDADA71D424A820070934E /* ImageMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDAD9E1D424A820070934E /* ImageMessageCell.xib */; };
+		C1CDADA81D424A820070934E /* AlternativeImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDADA01D424A820070934E /* AlternativeImageMessageCell.m */; };
+		C1CDADA91D424A820070934E /* AlternativeImageMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDADA11D424A820070934E /* AlternativeImageMessageCell.xib */; };
+		C1CDADAC1D424A920070934E /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDADAB1D424A920070934E /* MessageViewController.m */; };
 		D633E48B1D406A4400552E29 /* CookingStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E48A1D406A4400552E29 /* CookingStepViewController.m */; };
 		D633E48D1D406DC900552E29 /* 1949_126930.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D633E48C1D406DC900552E29 /* 1949_126930.jpg */; };
 		D633E4911D40B77C00552E29 /* CookingStepTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E48F1D40B77C00552E29 /* CookingStepTableViewCell.m */; };
@@ -109,10 +119,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		241CDF011D41BC2C008605D6 /* LoginsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginsViewController.h; sourceTree = "<group>"; };
-		241CDF021D41BC2C008605D6 /* LoginsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginsViewController.m; sourceTree = "<group>"; };
-		241CDF031D41BC2C008605D6 /* RegistersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistersViewController.h; sourceTree = "<group>"; };
-		241CDF041D41BC2C008605D6 /* RegistersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistersViewController.m; sourceTree = "<group>"; };
 		241CDF0E1D420148008605D6 /* TasteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasteViewController.h; sourceTree = "<group>"; };
 		241CDF0F1D420148008605D6 /* TasteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasteViewController.m; sourceTree = "<group>"; };
 		241CDF111D42015B008605D6 /* TasteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasteTableViewCell.h; sourceTree = "<group>"; };
@@ -245,6 +251,26 @@
 		6A1E6D64A6E66718E880A338 /* Pods-Foodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.debug.xcconfig"; sourceTree = "<group>"; };
 		859F2700D1932442456B998E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1CDAD8D1D424A640070934E /* LoginsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginsViewController.h; sourceTree = "<group>"; };
+		C1CDAD8E1D424A640070934E /* LoginsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginsViewController.m; sourceTree = "<group>"; };
+		C1CDAD8F1D424A640070934E /* RegistersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistersViewController.h; sourceTree = "<group>"; };
+		C1CDAD901D424A640070934E /* RegistersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistersViewController.m; sourceTree = "<group>"; };
+		C1CDAD911D424A640070934E /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		C1CDAD921D424A640070934E /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		C1CDAD961D424A820070934E /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		C1CDAD971D424A820070934E /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		C1CDAD981D424A820070934E /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		C1CDAD991D424A820070934E /* AlternativeMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlternativeMessageCell.h; sourceTree = "<group>"; };
+		C1CDAD9A1D424A820070934E /* AlternativeMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlternativeMessageCell.m; sourceTree = "<group>"; };
+		C1CDAD9B1D424A820070934E /* AlternativeMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlternativeMessageCell.xib; sourceTree = "<group>"; };
+		C1CDAD9C1D424A820070934E /* ImageMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMessageCell.h; sourceTree = "<group>"; };
+		C1CDAD9D1D424A820070934E /* ImageMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMessageCell.m; sourceTree = "<group>"; };
+		C1CDAD9E1D424A820070934E /* ImageMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageMessageCell.xib; sourceTree = "<group>"; };
+		C1CDAD9F1D424A820070934E /* AlternativeImageMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlternativeImageMessageCell.h; sourceTree = "<group>"; };
+		C1CDADA01D424A820070934E /* AlternativeImageMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlternativeImageMessageCell.m; sourceTree = "<group>"; };
+		C1CDADA11D424A820070934E /* AlternativeImageMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlternativeImageMessageCell.xib; sourceTree = "<group>"; };
+		C1CDADAA1D424A920070934E /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		C1CDADAB1D424A920070934E /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		D633E4891D406A4400552E29 /* CookingStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingStepViewController.h; sourceTree = "<group>"; };
 		D633E48A1D406A4400552E29 /* CookingStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingStepViewController.m; sourceTree = "<group>"; };
 		D633E48C1D406DC900552E29 /* 1949_126930.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1949_126930.jpg; path = HeadImage/1949_126930.jpg; sourceTree = "<group>"; };
@@ -468,6 +494,8 @@
 		247399ED1D34EF2500094DCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C1CDADAA1D424A920070934E /* MessageViewController.h */,
+				C1CDADAB1D424A920070934E /* MessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -548,10 +576,12 @@
 			children = (
 				247131AD1D35CDE3005491A1 /* MyViewController.h */,
 				247131AE1D35CDE3005491A1 /* MyViewController.m */,
-				241CDF011D41BC2C008605D6 /* LoginsViewController.h */,
-				241CDF021D41BC2C008605D6 /* LoginsViewController.m */,
-				241CDF031D41BC2C008605D6 /* RegistersViewController.h */,
-				241CDF041D41BC2C008605D6 /* RegistersViewController.m */,
+				C1CDAD8D1D424A640070934E /* LoginsViewController.h */,
+				C1CDAD8E1D424A640070934E /* LoginsViewController.m */,
+				C1CDAD8F1D424A640070934E /* RegistersViewController.h */,
+				C1CDAD901D424A640070934E /* RegistersViewController.m */,
+				C1CDAD911D424A640070934E /* ChatViewController.h */,
+				C1CDAD921D424A640070934E /* ChatViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -573,6 +603,18 @@
 		247399FA1D34EF2500094DCD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1CDAD961D424A820070934E /* MessageCell.h */,
+				C1CDAD971D424A820070934E /* MessageCell.m */,
+				C1CDAD981D424A820070934E /* MessageCell.xib */,
+				C1CDAD991D424A820070934E /* AlternativeMessageCell.h */,
+				C1CDAD9A1D424A820070934E /* AlternativeMessageCell.m */,
+				C1CDAD9B1D424A820070934E /* AlternativeMessageCell.xib */,
+				C1CDAD9C1D424A820070934E /* ImageMessageCell.h */,
+				C1CDAD9D1D424A820070934E /* ImageMessageCell.m */,
+				C1CDAD9E1D424A820070934E /* ImageMessageCell.xib */,
+				C1CDAD9F1D424A820070934E /* AlternativeImageMessageCell.h */,
+				C1CDADA01D424A820070934E /* AlternativeImageMessageCell.m */,
+				C1CDADA11D424A820070934E /* AlternativeImageMessageCell.xib */,
 				247131B41D35E1E6005491A1 /* Cell */,
 			);
 			path = View;
@@ -832,8 +874,11 @@
 				247F63BB1D38D41A008D45B1 /* recommendTableViewCell.xib in Resources */,
 				D65BF34E1D3F66330075CC63 /* 2.png in Resources */,
 				24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */,
+				C1CDADA71D424A820070934E /* ImageMessageCell.xib in Resources */,
+				C1CDADA51D424A820070934E /* AlternativeMessageCell.xib in Resources */,
 				D65BF3511D3F66330075CC63 /* 5.png in Resources */,
 				D65BF3361D3F0C0D0075CC63 /* 3622_287351.jpg in Resources */,
+				C1CDADA31D424A820070934E /* MessageCell.xib in Resources */,
 				242373591D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib in Resources */,
 				247F63C21D38FAAD008D45B1 /* LikeCollectionViewCell.xib in Resources */,
 				247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */,
@@ -843,6 +888,7 @@
 				D65BF34F1D3F66330075CC63 /* 3.png in Resources */,
 				24D941821D3A3A2900D38EF6 /* changjianshicai@2x.png in Resources */,
 				D65BF3521D3F66330075CC63 /* 6.png in Resources */,
+				C1CDADA91D424A820070934E /* AlternativeImageMessageCell.xib in Resources */,
 				D65BF34B1D3F66330075CC63 /* 06.png in Resources */,
 				24D941871D3A4B8F00D38EF6 /* QQ20160716-2.png in Resources */,
 				D65BF3461D3F66330075CC63 /* 01.png in Resources */,
@@ -926,8 +972,10 @@
 				241CDF181D4206C4008605D6 /* TasteRequest.m in Sources */,
 				24D33C401D37CE8100D6F765 /* UIView+WebCacheOperation.m in Sources */,
 				2423735D1D3CDF760075AAB0 /* VideoHeaderTableViewCell.m in Sources */,
+				C1CDAD941D424A640070934E /* RegistersViewController.m in Sources */,
 				247132081D363D67005491A1 /* FoodViewController.m in Sources */,
 				24D33C2C1D37CE8100D6F765 /* TADotView.m in Sources */,
+				C1CDADAC1D424A920070934E /* MessageViewController.m in Sources */,
 				241CDF141D42015B008605D6 /* TasteTableViewCell.m in Sources */,
 				24D33C3E1D37CE8100D6F765 /* UIImageView+HighlightedWebCache.m in Sources */,
 				24D33C2D1D37CE8100D6F765 /* TAPageControl.m in Sources */,
@@ -950,22 +998,25 @@
 				D633E4911D40B77C00552E29 /* CookingStepTableViewCell.m in Sources */,
 				24907E151D3E0720006F2B57 /* BaseModel.m in Sources */,
 				24907E1B1D3E09AA006F2B57 /* VideoMenuRequest.m in Sources */,
+				C1CDAD931D424A640070934E /* LoginsViewController.m in Sources */,
 				D633E48B1D406A4400552E29 /* CookingStepViewController.m in Sources */,
 				24739A101D35036700094DCD /* RootViewController.m in Sources */,
 				24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */,
+				C1CDADA21D424A820070934E /* MessageCell.m in Sources */,
 				242373541D3C75800075AAB0 /* VideoMenuViewController.m in Sources */,
-				241CDF051D41BC2C008605D6 /* LoginsViewController.m in Sources */,
-				241CDF061D41BC2C008605D6 /* RegistersViewController.m in Sources */,
 				24907E221D3E4208006F2B57 /* VideoDetailTableViewCell.m in Sources */,
 				24D33C3B1D37CE8100D6F765 /* UIImage+GIF.m in Sources */,
 				24D33C3D1D37CE8100D6F765 /* UIImage+WebP.m in Sources */,
 				D65BF32A1D3F0AC30075CC63 /* CookingViewController.m in Sources */,
+				C1CDADA81D424A820070934E /* AlternativeImageMessageCell.m in Sources */,
 				24D33C321D37CE8100D6F765 /* NSData+ImageContentType.m in Sources */,
 				24D33C341D37CE8100D6F765 /* SDWebImageCompat.m in Sources */,
 				247399DA1D34ED3F00094DCD /* Foodie.xcdatamodeld in Sources */,
 				24D33C2B1D37CE8100D6F765 /* TAAnimatedDotView.m in Sources */,
 				247F63C11D38FAAD008D45B1 /* LikeCollectionViewCell.m in Sources */,
 				242373581D3CB47F0075AAB0 /* VideoMenuTableViewCell.m in Sources */,
+				C1CDADA61D424A820070934E /* ImageMessageCell.m in Sources */,
+				C1CDAD951D424A640070934E /* ChatViewController.m in Sources */,
 				24D33C331D37CE8100D6F765 /* SDImageCache.m in Sources */,
 				247F63BA1D38D41A008D45B1 /* recommendTableViewCell.m in Sources */,
 				24D33C361D37CE8100D6F765 /* SDWebImageDownloader.m in Sources */,
@@ -975,6 +1026,7 @@
 				24D33C3A1D37CE8100D6F765 /* UIButton+WebCache.m in Sources */,
 				D65BF3331D3F0B340075CC63 /* SubtitleTableViewCell.m in Sources */,
 				D65BF32E1D3F0B1F0075CC63 /* HeadlineTableViewCell.m in Sources */,
+				C1CDADA41D424A820070934E /* AlternativeMessageCell.m in Sources */,
 				247399CE1D34ED3F00094DCD /* main.m in Sources */,
 				24D33C311D37CE8100D6F765 /* MKAnnotationView+WebCache.m in Sources */,
 				24907E1E1D3E23B9006F2B57 /* VideoGourmetRequest.m in Sources */,
