@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="163" id="KGk-i7-Jjw" customClass="MessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qO-O1-53J">
+                        <rect key="frame" x="18" y="14" width="322" height="107"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aed80e26.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="Eos-p6-Bcz">
+                        <rect key="frame" x="357" y="14" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="BKl-z3-7Ug"/>
+                            <constraint firstAttribute="width" constant="40" id="TcX-zx-BX9"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4qO-O1-53J" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ECL-3m-4tJ"/>
+                    <constraint firstItem="4qO-O1-53J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="GFh-Lg-ANy"/>
+                    <constraint firstAttribute="trailing" secondItem="Eos-p6-Bcz" secondAttribute="trailing" constant="17" id="Sgv-G0-H1v"/>
+                    <constraint firstItem="Eos-p6-Bcz" firstAttribute="leading" secondItem="4qO-O1-53J" secondAttribute="trailing" constant="17" id="Syc-L8-Tu3"/>
+                    <constraint firstItem="4qO-O1-53J" firstAttribute="top" secondItem="Eos-p6-Bcz" secondAttribute="top" id="da5-ZK-CJf"/>
+                    <constraint firstItem="Eos-p6-Bcz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="nM0-Qs-OP2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="imageV" destination="Eos-p6-Bcz" id="rGs-tg-KQt"/>
+                <outlet property="label" destination="4qO-O1-53J" id="kBX-MD-COv"/>
+            </connections>
+            <point key="canvasLocation" x="556" y="392.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="aed80e26.jpeg" width="480" height="479"/>
+    </resources>
+</document>

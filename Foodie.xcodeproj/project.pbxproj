@@ -81,6 +81,16 @@
 		24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941831D3A492000D38EF6 /* QQ20160716-0.png */; };
 		24D941871D3A4B8F00D38EF6 /* QQ20160716-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941851D3A4B8F00D38EF6 /* QQ20160716-2.png */; };
 		24D941881D3A4B8F00D38EF6 /* QQ20160716-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 24D941861D3A4B8F00D38EF6 /* QQ20160716-1.png */; };
+		C1CDAD721D41F9360070934E /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD711D41F9360070934E /* ChatViewController.m */; };
+		C1CDAD761D41F95D0070934E /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD741D41F95D0070934E /* MessageCell.m */; };
+		C1CDAD771D41F95D0070934E /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDAD751D41F95D0070934E /* MessageCell.xib */; };
+		C1CDAD811D41FA940070934E /* AlternativeMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD791D41FA940070934E /* AlternativeMessageCell.m */; };
+		C1CDAD821D41FA940070934E /* AlternativeMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDAD7A1D41FA940070934E /* AlternativeMessageCell.xib */; };
+		C1CDAD831D41FA940070934E /* ImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD7C1D41FA940070934E /* ImageMessageCell.m */; };
+		C1CDAD841D41FA940070934E /* ImageMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDAD7D1D41FA940070934E /* ImageMessageCell.xib */; };
+		C1CDAD851D41FA940070934E /* AlternativeImageMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD7F1D41FA940070934E /* AlternativeImageMessageCell.m */; };
+		C1CDAD861D41FA940070934E /* AlternativeImageMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CDAD801D41FA940070934E /* AlternativeImageMessageCell.xib */; };
+		C1CDAD8C1D4212B30070934E /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CDAD8B1D4212B30070934E /* MessageViewController.m */; };
 		D633E48B1D406A4400552E29 /* CookingStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E48A1D406A4400552E29 /* CookingStepViewController.m */; };
 		D633E48D1D406DC900552E29 /* 1949_126930.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D633E48C1D406DC900552E29 /* 1949_126930.jpg */; };
 		D633E4911D40B77C00552E29 /* CookingStepTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D633E48F1D40B77C00552E29 /* CookingStepTableViewCell.m */; };
@@ -245,6 +255,22 @@
 		6A1E6D64A6E66718E880A338 /* Pods-Foodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.debug.xcconfig"; sourceTree = "<group>"; };
 		859F2700D1932442456B998E /* Pods-Foodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodie/Pods-Foodie.release.xcconfig"; sourceTree = "<group>"; };
 		9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Foodie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1CDAD701D41F9360070934E /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		C1CDAD711D41F9360070934E /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		C1CDAD731D41F95D0070934E /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		C1CDAD741D41F95D0070934E /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		C1CDAD751D41F95D0070934E /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		C1CDAD781D41FA940070934E /* AlternativeMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlternativeMessageCell.h; sourceTree = "<group>"; };
+		C1CDAD791D41FA940070934E /* AlternativeMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlternativeMessageCell.m; sourceTree = "<group>"; };
+		C1CDAD7A1D41FA940070934E /* AlternativeMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlternativeMessageCell.xib; sourceTree = "<group>"; };
+		C1CDAD7B1D41FA940070934E /* ImageMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMessageCell.h; sourceTree = "<group>"; };
+		C1CDAD7C1D41FA940070934E /* ImageMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMessageCell.m; sourceTree = "<group>"; };
+		C1CDAD7D1D41FA940070934E /* ImageMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageMessageCell.xib; sourceTree = "<group>"; };
+		C1CDAD7E1D41FA940070934E /* AlternativeImageMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlternativeImageMessageCell.h; sourceTree = "<group>"; };
+		C1CDAD7F1D41FA940070934E /* AlternativeImageMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlternativeImageMessageCell.m; sourceTree = "<group>"; };
+		C1CDAD801D41FA940070934E /* AlternativeImageMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlternativeImageMessageCell.xib; sourceTree = "<group>"; };
+		C1CDAD8A1D4212B30070934E /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		C1CDAD8B1D4212B30070934E /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		D633E4891D406A4400552E29 /* CookingStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingStepViewController.h; sourceTree = "<group>"; };
 		D633E48A1D406A4400552E29 /* CookingStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingStepViewController.m; sourceTree = "<group>"; };
 		D633E48C1D406DC900552E29 /* 1949_126930.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1949_126930.jpg; path = HeadImage/1949_126930.jpg; sourceTree = "<group>"; };
@@ -468,6 +494,8 @@
 		247399ED1D34EF2500094DCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C1CDAD8A1D4212B30070934E /* MessageViewController.h */,
+				C1CDAD8B1D4212B30070934E /* MessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -552,6 +580,8 @@
 				241CDF021D41BC2C008605D6 /* LoginsViewController.m */,
 				241CDF031D41BC2C008605D6 /* RegistersViewController.h */,
 				241CDF041D41BC2C008605D6 /* RegistersViewController.m */,
+				C1CDAD701D41F9360070934E /* ChatViewController.h */,
+				C1CDAD711D41F9360070934E /* ChatViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -573,6 +603,18 @@
 		247399FA1D34EF2500094DCD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C1CDAD731D41F95D0070934E /* MessageCell.h */,
+				C1CDAD741D41F95D0070934E /* MessageCell.m */,
+				C1CDAD751D41F95D0070934E /* MessageCell.xib */,
+				C1CDAD781D41FA940070934E /* AlternativeMessageCell.h */,
+				C1CDAD791D41FA940070934E /* AlternativeMessageCell.m */,
+				C1CDAD7A1D41FA940070934E /* AlternativeMessageCell.xib */,
+				C1CDAD7B1D41FA940070934E /* ImageMessageCell.h */,
+				C1CDAD7C1D41FA940070934E /* ImageMessageCell.m */,
+				C1CDAD7D1D41FA940070934E /* ImageMessageCell.xib */,
+				C1CDAD7E1D41FA940070934E /* AlternativeImageMessageCell.h */,
+				C1CDAD7F1D41FA940070934E /* AlternativeImageMessageCell.m */,
+				C1CDAD801D41FA940070934E /* AlternativeImageMessageCell.xib */,
 				247131B41D35E1E6005491A1 /* Cell */,
 			);
 			path = View;
@@ -831,11 +873,13 @@
 				D65BF34C1D3F66330075CC63 /* 07.png in Resources */,
 				247F63BB1D38D41A008D45B1 /* recommendTableViewCell.xib in Resources */,
 				D65BF34E1D3F66330075CC63 /* 2.png in Resources */,
+				C1CDAD841D41FA940070934E /* ImageMessageCell.xib in Resources */,
 				24D941841D3A492000D38EF6 /* QQ20160716-0.png in Resources */,
 				D65BF3511D3F66330075CC63 /* 5.png in Resources */,
 				D65BF3361D3F0C0D0075CC63 /* 3622_287351.jpg in Resources */,
 				242373591D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib in Resources */,
 				247F63C21D38FAAD008D45B1 /* LikeCollectionViewCell.xib in Resources */,
+				C1CDAD821D41FA940070934E /* AlternativeMessageCell.xib in Resources */,
 				247399DF1D34ED3F00094DCD /* LaunchScreen.storyboard in Resources */,
 				D65BF3481D3F66330075CC63 /* 03.png in Resources */,
 				247131B91D35E1F9005491A1 /* MyTableViewCell.xib in Resources */,
@@ -845,6 +889,7 @@
 				D65BF3521D3F66330075CC63 /* 6.png in Resources */,
 				D65BF34B1D3F66330075CC63 /* 06.png in Resources */,
 				24D941871D3A4B8F00D38EF6 /* QQ20160716-2.png in Resources */,
+				C1CDAD771D41F95D0070934E /* MessageCell.xib in Resources */,
 				D65BF3461D3F66330075CC63 /* 01.png in Resources */,
 				247399DC1D34ED3F00094DCD /* Assets.xcassets in Resources */,
 				24907E231D3E4208006F2B57 /* VideoDetailTableViewCell.xib in Resources */,
@@ -855,7 +900,11 @@
 				2423735E1D3CDF760075AAB0 /* VideoHeaderTableViewCell.xib in Resources */,
 				247399D71D34ED3F00094DCD /* Main.storyboard in Resources */,
 				247131B31D35DEA3005491A1 /* ren.jpg in Resources */,
+
 				241CDF151D42015B008605D6 /* TasteTableViewCell.xib in Resources */,
+
+				C1CDAD861D41FA940070934E /* AlternativeImageMessageCell.xib in Resources */,
+
 				D633E4921D40B77C00552E29 /* CookingStepTableViewCell.xib in Resources */,
 				D65BF3471D3F66330075CC63 /* 02.png in Resources */,
 				D633E48D1D406DC900552E29 /* 1949_126930.jpg in Resources */,
@@ -926,14 +975,24 @@
 				241CDF181D4206C4008605D6 /* TasteRequest.m in Sources */,
 				24D33C401D37CE8100D6F765 /* UIView+WebCacheOperation.m in Sources */,
 				2423735D1D3CDF760075AAB0 /* VideoHeaderTableViewCell.m in Sources */,
+				C1CDAD761D41F95D0070934E /* MessageCell.m in Sources */,
 				247132081D363D67005491A1 /* FoodViewController.m in Sources */,
 				24D33C2C1D37CE8100D6F765 /* TADotView.m in Sources */,
+<<<<<<< HEAD
 				241CDF141D42015B008605D6 /* TasteTableViewCell.m in Sources */,
+
+				C1CDAD8C1D4212B30070934E /* MessageViewController.m in Sources */,
+
 				24D33C3E1D37CE8100D6F765 /* UIImageView+HighlightedWebCache.m in Sources */,
 				24D33C2D1D37CE8100D6F765 /* TAPageControl.m in Sources */,
 				24D33C2A1D37CE8100D6F765 /* TAAbstractDotView.m in Sources */,
 				24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */,
+
 				241CDF101D420148008605D6 /* TasteViewController.m in Sources */,
+
+				241CDF001D41B927008605D6 /* MenuViewController.m in Sources */,
+				C1CDAD811D41FA940070934E /* AlternativeMessageCell.m in Sources */,
+
 				24D33C381D37CE8100D6F765 /* SDWebImageManager.m in Sources */,
 				241CDF1B1D42082B008605D6 /* TasteModel.m in Sources */,
 				242373611D3CF1E40075AAB0 /* VideoWedViewController.m in Sources */,
@@ -943,6 +1002,7 @@
 				24739A141D3505E400094DCD /* BaseViewController.m in Sources */,
 				24D33C391D37CE8100D6F765 /* SDWebImagePrefetcher.m in Sources */,
 				24D33C3F1D37CE8100D6F765 /* UIImageView+WebCache.m in Sources */,
+				C1CDAD831D41FA940070934E /* ImageMessageCell.m in Sources */,
 				24907E181D3E074A006F2B57 /* VideoMenuModel.m in Sources */,
 				247131AF1D35CDE3005491A1 /* MyViewController.m in Sources */,
 				241CDF1E1D422232008605D6 /* UserInfo.m in Sources */,
@@ -970,7 +1030,9 @@
 				247F63BA1D38D41A008D45B1 /* recommendTableViewCell.m in Sources */,
 				24D33C361D37CE8100D6F765 /* SDWebImageDownloader.m in Sources */,
 				247399D11D34ED3F00094DCD /* AppDelegate.m in Sources */,
+				C1CDAD721D41F9360070934E /* ChatViewController.m in Sources */,
 				24D33C301D37CE8100D6F765 /* UIView+SDExtension.m in Sources */,
+				C1CDAD851D41FA940070934E /* AlternativeImageMessageCell.m in Sources */,
 				24D33C3C1D37CE8100D6F765 /* UIImage+MultiFormat.m in Sources */,
 				24D33C3A1D37CE8100D6F765 /* UIButton+WebCache.m in Sources */,
 				D65BF3331D3F0B340075CC63 /* SubtitleTableViewCell.m in Sources */,
