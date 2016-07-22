@@ -103,15 +103,25 @@ buttonClicked
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    if (indexPath.row == 0) {
+    if (indexPath.row == 0&&indexPath.section==0) {
+        VideoMenuModel *model= [[VideoMenuModel alloc]init];
         
-        return 150;
-        
+        return [self getHeightForOwnerDetailLabel:model.describtion]+80;
         
      
     }else{
         return 250;
     }
+}
+
+- (CGFloat)getHeightForOwnerDetailLabel:(NSString*)text{
+    CGRect testRect = [text boundingRectWithSize:CGSizeMake(314, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName :[UIFont systemFontOfSize:14.0]} context:nil];
+    //判断，如果文本只有一行，直接返回cell自己高度
+    if (testRect.size.height > 50) {
+        return testRect.size.height;
+        
+    }
+    return 100;
 }
 //返回 cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

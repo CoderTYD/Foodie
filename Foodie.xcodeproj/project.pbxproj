@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C4CE5ED2111372CFA3D0FA5 /* libPods-Foodie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */; };
+		241CDF001D41B927008605D6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDEFF1D41B927008605D6 /* MenuViewController.m */; };
+		241CDF051D41BC2C008605D6 /* LoginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF021D41BC2C008605D6 /* LoginsViewController.m */; };
+		241CDF061D41BC2C008605D6 /* RegistersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF041D41BC2C008605D6 /* RegistersViewController.m */; };
 		242373541D3C75800075AAB0 /* VideoMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242373531D3C75800075AAB0 /* VideoMenuViewController.m */; };
 		242373581D3CB47F0075AAB0 /* VideoMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 242373561D3CB47F0075AAB0 /* VideoMenuTableViewCell.m */; };
 		242373591D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242373571D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib */; };
@@ -101,6 +104,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241CDEFE1D41B927008605D6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		241CDEFF1D41B927008605D6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		241CDF011D41BC2C008605D6 /* LoginsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginsViewController.h; sourceTree = "<group>"; };
+		241CDF021D41BC2C008605D6 /* LoginsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginsViewController.m; sourceTree = "<group>"; };
+		241CDF031D41BC2C008605D6 /* RegistersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistersViewController.h; sourceTree = "<group>"; };
+		241CDF041D41BC2C008605D6 /* RegistersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistersViewController.m; sourceTree = "<group>"; };
 		242373521D3C75800075AAB0 /* VideoMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMenuViewController.h; sourceTree = "<group>"; };
 		242373531D3C75800075AAB0 /* VideoMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMenuViewController.m; sourceTree = "<group>"; };
 		242373551D3CB47F0075AAB0 /* VideoMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMenuTableViewCell.h; sourceTree = "<group>"; };
@@ -367,6 +376,8 @@
 				D65BF3291D3F0AC30075CC63 /* CookingViewController.m */,
 				D633E4891D406A4400552E29 /* CookingStepViewController.h */,
 				D633E48A1D406A4400552E29 /* CookingStepViewController.m */,
+				241CDEFE1D41B927008605D6 /* MenuViewController.h */,
+				241CDEFF1D41B927008605D6 /* MenuViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -506,6 +517,10 @@
 			children = (
 				247131AD1D35CDE3005491A1 /* MyViewController.h */,
 				247131AE1D35CDE3005491A1 /* MyViewController.m */,
+				241CDF011D41BC2C008605D6 /* LoginsViewController.h */,
+				241CDF021D41BC2C008605D6 /* LoginsViewController.m */,
+				241CDF031D41BC2C008605D6 /* RegistersViewController.h */,
+				241CDF041D41BC2C008605D6 /* RegistersViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -884,6 +899,7 @@
 				24D33C2D1D37CE8100D6F765 /* TAPageControl.m in Sources */,
 				24D33C2A1D37CE8100D6F765 /* TAAbstractDotView.m in Sources */,
 				24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */,
+				241CDF001D41B927008605D6 /* MenuViewController.m in Sources */,
 				24D33C381D37CE8100D6F765 /* SDWebImageManager.m in Sources */,
 				242373611D3CF1E40075AAB0 /* VideoWedViewController.m in Sources */,
 				24D33C351D37CE8100D6F765 /* SDWebImageDecoder.m in Sources */,
@@ -902,6 +918,8 @@
 				24739A101D35036700094DCD /* RootViewController.m in Sources */,
 				24739A081D34F22A00094DCD /* NetWorkRequest.m in Sources */,
 				242373541D3C75800075AAB0 /* VideoMenuViewController.m in Sources */,
+				241CDF051D41BC2C008605D6 /* LoginsViewController.m in Sources */,
+				241CDF061D41BC2C008605D6 /* RegistersViewController.m in Sources */,
 				24907E221D3E4208006F2B57 /* VideoDetailTableViewCell.m in Sources */,
 				24D33C3B1D37CE8100D6F765 /* UIImage+GIF.m in Sources */,
 				24D33C3D1D37CE8100D6F765 /* UIImage+WebP.m in Sources */,

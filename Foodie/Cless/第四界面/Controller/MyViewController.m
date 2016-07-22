@@ -8,9 +8,9 @@
 
 #import "MyViewController.h"
 #import "MyTableViewCell.h"
+#import "LoginsViewController.h"
 @interface MyViewController ()
 <
-    UINavigationControllerDelegate,
     UITableViewDataSource,
     UITableViewDelegate
 >
@@ -35,8 +35,7 @@
     self.headImage.layer.masksToBounds = YES;
     self.headImage.layer.cornerRadius = self.headImage.bounds.size.width / 2.0;
     
-    // 设置导航控制器的代理为self
-    self.navigationController.delegate = self;
+
     // 设置代理
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
@@ -44,20 +43,55 @@
     //注册 Cell
     [self.myTableView registerNib:[UINib nibWithNibName:@"MyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:MyTableViewCell_Identify];
     
-    //左边按钮
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"MainTagSubIcon"] style:(UIBarButtonItemStylePlain) target:self action:@selector(rightBarAction:)];
+  
     //右边设置按钮
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"mine-setting-icon"] style:(UIBarButtonItemStyleDone) target:self action:@selector(setupBarAction:)];
+    [self setNavigationBarType];
+    
+    
+    [self addRightNavigationItem];
+    
+}
+
+
+//登录按钮
+- (void)addRightNavigationItem{
+    
+    
+    UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [btn setTitle:@"登录" forState:(UIControlStateNormal)];
+    btn.frame = CGRectMake(0, 0, 40, 30);
+    [btn setTitleColor:[UIColor colorWithRed:0.33 green:0.21 blue:0.15 alpha:1.00] forState:UIControlStateNormal];
+    // 选中时字体颜色
+    [btn setTitleColor:[UIColor colorWithRed:1.00 green:0.44 blue:0.81 alpha:1.00] forState:(UIControlStateHighlighted)];
+    
+    [btn addTarget:self action:@selector(rightBarItemClicked:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    
+}
+
+-(void)rightBarItemClicked:(UIButton *)btn{
+    
+    NSLog(@"rightBarItemClicked");
+    //跳转到登录界面
+    UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    LoginsViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"LoginsViewController"];
+    //模态样式
+    loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController:loginVC animated:YES completion:^{
+        
+        
+        
+    }];
     
     
 }
 
-//左边按钮点击事件
--(void)rightBarAction:(UIBarButtonItem *)sender{
-    
-    NSLog(@"第四界面,左按钮");
-    
-}
+
 //右边设置按钮点击事件
 - (void)setupBarAction:(UIBarButtonItem *)sender{
     
@@ -116,14 +150,24 @@
 }
 
 
-// 将要显示控制器
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    // 判断要显示的控制器是否是自己
-    BOOL isHomePage = [viewController isKindOfClass:[self class]];
-    
-    [self.navigationController setNavigationBarHidden:isHomePage animated:YES];
-}
 
+- (void)setNavigationBarType{
+    
+    self.navigationController.navigationBar.translucent = YES;
+    UIColor *color = [UIColor clearColor];
+    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, 64);
+    
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.clipsToBounds = NO;
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
