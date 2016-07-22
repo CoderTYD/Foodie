@@ -8,14 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C4CE5ED2111372CFA3D0FA5 /* libPods-Foodie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC4B18C5F9F827E5758BB0C /* libPods-Foodie.a */; };
+		241CDF001D41B927008605D6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDEFF1D41B927008605D6 /* MenuViewController.m */; };
 		241CDF051D41BC2C008605D6 /* LoginsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF021D41BC2C008605D6 /* LoginsViewController.m */; };
 		241CDF061D41BC2C008605D6 /* RegistersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF041D41BC2C008605D6 /* RegistersViewController.m */; };
-		241CDF101D420148008605D6 /* TasteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF0F1D420148008605D6 /* TasteViewController.m */; };
-		241CDF141D42015B008605D6 /* TasteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF121D42015B008605D6 /* TasteTableViewCell.m */; };
-		241CDF151D42015B008605D6 /* TasteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241CDF131D42015B008605D6 /* TasteTableViewCell.xib */; };
-		241CDF181D4206C4008605D6 /* TasteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF171D4206C4008605D6 /* TasteRequest.m */; };
-		241CDF1B1D42082B008605D6 /* TasteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF1A1D42082B008605D6 /* TasteModel.m */; };
-		241CDF1E1D422232008605D6 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 241CDF1D1D422232008605D6 /* UserInfo.m */; };
 		242373541D3C75800075AAB0 /* VideoMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242373531D3C75800075AAB0 /* VideoMenuViewController.m */; };
 		242373581D3CB47F0075AAB0 /* VideoMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 242373561D3CB47F0075AAB0 /* VideoMenuTableViewCell.m */; };
 		242373591D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242373571D3CB47F0075AAB0 /* VideoMenuTableViewCell.xib */; };
@@ -119,21 +114,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241CDEFE1D41B927008605D6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		241CDEFF1D41B927008605D6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		241CDF011D41BC2C008605D6 /* LoginsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginsViewController.h; sourceTree = "<group>"; };
 		241CDF021D41BC2C008605D6 /* LoginsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginsViewController.m; sourceTree = "<group>"; };
 		241CDF031D41BC2C008605D6 /* RegistersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistersViewController.h; sourceTree = "<group>"; };
 		241CDF041D41BC2C008605D6 /* RegistersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistersViewController.m; sourceTree = "<group>"; };
-		241CDF0E1D420148008605D6 /* TasteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasteViewController.h; sourceTree = "<group>"; };
-		241CDF0F1D420148008605D6 /* TasteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasteViewController.m; sourceTree = "<group>"; };
-		241CDF111D42015B008605D6 /* TasteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasteTableViewCell.h; sourceTree = "<group>"; };
-		241CDF121D42015B008605D6 /* TasteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasteTableViewCell.m; sourceTree = "<group>"; };
-		241CDF131D42015B008605D6 /* TasteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TasteTableViewCell.xib; sourceTree = "<group>"; };
-		241CDF161D4206C4008605D6 /* TasteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasteRequest.h; sourceTree = "<group>"; };
-		241CDF171D4206C4008605D6 /* TasteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasteRequest.m; sourceTree = "<group>"; };
-		241CDF191D42082B008605D6 /* TasteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasteModel.h; sourceTree = "<group>"; };
-		241CDF1A1D42082B008605D6 /* TasteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasteModel.m; sourceTree = "<group>"; };
-		241CDF1C1D422232008605D6 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
-		241CDF1D1D422232008605D6 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		242373521D3C75800075AAB0 /* VideoMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMenuViewController.h; sourceTree = "<group>"; };
 		242373531D3C75800075AAB0 /* VideoMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoMenuViewController.m; sourceTree = "<group>"; };
 		242373551D3CB47F0075AAB0 /* VideoMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoMenuTableViewCell.h; sourceTree = "<group>"; };
@@ -315,16 +301,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		241CDF081D41C568008605D6 /* Menu[个人菜单] */ = {
-			isa = PBXGroup;
-			children = (
-				241CDF111D42015B008605D6 /* TasteTableViewCell.h */,
-				241CDF121D42015B008605D6 /* TasteTableViewCell.m */,
-				241CDF131D42015B008605D6 /* TasteTableViewCell.xib */,
-			);
-			name = "Menu[个人菜单]";
-			sourceTree = "<group>";
-		};
 		247131B41D35E1E6005491A1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,8 +402,8 @@
 				D65BF3291D3F0AC30075CC63 /* CookingViewController.m */,
 				D633E4891D406A4400552E29 /* CookingStepViewController.h */,
 				D633E48A1D406A4400552E29 /* CookingStepViewController.m */,
-				241CDF0E1D420148008605D6 /* TasteViewController.h */,
-				241CDF0F1D420148008605D6 /* TasteViewController.m */,
+				241CDEFE1D41B927008605D6 /* MenuViewController.h */,
+				241CDEFF1D41B927008605D6 /* MenuViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,10 +417,6 @@
 				24907E171D3E074A006F2B57 /* VideoMenuModel.m */,
 				24B91B941D3F63FA0082F79C /* LikeModel.h */,
 				24B91B951D3F63FA0082F79C /* LikeModel.m */,
-				241CDF191D42082B008605D6 /* TasteModel.h */,
-				241CDF1A1D42082B008605D6 /* TasteModel.m */,
-				241CDF1C1D422232008605D6 /* UserInfo.h */,
-				241CDF1D1D422232008605D6 /* UserInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,8 +430,6 @@
 				24907E1D1D3E23B9006F2B57 /* VideoGourmetRequest.m */,
 				24B91B971D3F646D0082F79C /* LickRequest.h */,
 				24B91B981D3F646D0082F79C /* LickRequest.m */,
-				241CDF161D4206C4008605D6 /* TasteRequest.h */,
-				241CDF171D4206C4008605D6 /* TasteRequest.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -473,9 +443,8 @@
 				247F63BE1D38FAAD008D45B1 /* LikeCollectionViewCell.h */,
 				247F63BF1D38FAAD008D45B1 /* LikeCollectionViewCell.m */,
 				247F63C01D38FAAD008D45B1 /* LikeCollectionViewCell.xib */,
-				24B91B931D3F13F20082F79C /* Cooking[菜谱分类] */,
-				24B91B911D3F13C60082F79C /* video[视频菜谱] */,
-				241CDF081D41C568008605D6 /* Menu[个人菜单] */,
+				24B91B911D3F13C60082F79C /* video */,
+				24B91B931D3F13F20082F79C /* menu */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -657,7 +626,7 @@
 			name = "工具";
 			sourceTree = "<group>";
 		};
-		24B91B911D3F13C60082F79C /* video[视频菜谱] */ = {
+		24B91B911D3F13C60082F79C /* video */ = {
 			isa = PBXGroup;
 			children = (
 				242373551D3CB47F0075AAB0 /* VideoMenuTableViewCell.h */,
@@ -673,10 +642,10 @@
 				24907E201D3E4208006F2B57 /* VideoDetailTableViewCell.m */,
 				24907E211D3E4208006F2B57 /* VideoDetailTableViewCell.xib */,
 			);
-			name = "video[视频菜谱]";
+			name = video;
 			sourceTree = "<group>";
 		};
-		24B91B931D3F13F20082F79C /* Cooking[菜谱分类] */ = {
+		24B91B931D3F13F20082F79C /* menu */ = {
 			isa = PBXGroup;
 			children = (
 				D65BF32B1D3F0B1F0075CC63 /* HeadlineTableViewCell.h */,
@@ -689,7 +658,7 @@
 				D633E48F1D40B77C00552E29 /* CookingStepTableViewCell.m */,
 				D633E4901D40B77C00552E29 /* CookingStepTableViewCell.xib */,
 			);
-			name = "Cooking[菜谱分类]";
+			name = menu;
 			sourceTree = "<group>";
 		};
 		24D33BF71D37CE8100D6F765 /* Lib */ = {
@@ -901,9 +870,11 @@
 				247399D71D34ED3F00094DCD /* Main.storyboard in Resources */,
 				247131B31D35DEA3005491A1 /* ren.jpg in Resources */,
 
+
 				241CDF151D42015B008605D6 /* TasteTableViewCell.xib in Resources */,
 
 				C1CDAD861D41FA940070934E /* AlternativeImageMessageCell.xib in Resources */,
+
 
 				D633E4921D40B77C00552E29 /* CookingStepTableViewCell.xib in Resources */,
 				D65BF3471D3F66330075CC63 /* 02.png in Resources */,
@@ -972,29 +943,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B91B961D3F63FA0082F79C /* LikeModel.m in Sources */,
-				241CDF181D4206C4008605D6 /* TasteRequest.m in Sources */,
 				24D33C401D37CE8100D6F765 /* UIView+WebCacheOperation.m in Sources */,
 				2423735D1D3CDF760075AAB0 /* VideoHeaderTableViewCell.m in Sources */,
 				C1CDAD761D41F95D0070934E /* MessageCell.m in Sources */,
 				247132081D363D67005491A1 /* FoodViewController.m in Sources */,
 				24D33C2C1D37CE8100D6F765 /* TADotView.m in Sources */,
-<<<<<<< HEAD
+
 				241CDF141D42015B008605D6 /* TasteTableViewCell.m in Sources */,
 
 				C1CDAD8C1D4212B30070934E /* MessageViewController.m in Sources */,
+
 
 				24D33C3E1D37CE8100D6F765 /* UIImageView+HighlightedWebCache.m in Sources */,
 				24D33C2D1D37CE8100D6F765 /* TAPageControl.m in Sources */,
 				24D33C2A1D37CE8100D6F765 /* TAAbstractDotView.m in Sources */,
 				24739A1A1D35083500094DCD /* FoodieTabBar.m in Sources */,
 
+
 				241CDF101D420148008605D6 /* TasteViewController.m in Sources */,
 
 				241CDF001D41B927008605D6 /* MenuViewController.m in Sources */,
 				C1CDAD811D41FA940070934E /* AlternativeMessageCell.m in Sources */,
 
+
+				241CDF001D41B927008605D6 /* MenuViewController.m in Sources */,
+
 				24D33C381D37CE8100D6F765 /* SDWebImageManager.m in Sources */,
-				241CDF1B1D42082B008605D6 /* TasteModel.m in Sources */,
 				242373611D3CF1E40075AAB0 /* VideoWedViewController.m in Sources */,
 				24D33C351D37CE8100D6F765 /* SDWebImageDecoder.m in Sources */,
 				242373651D3CFCB50075AAB0 /* VideoDetailHeaderTableViewCell.m in Sources */,
@@ -1005,7 +979,6 @@
 				C1CDAD831D41FA940070934E /* ImageMessageCell.m in Sources */,
 				24907E181D3E074A006F2B57 /* VideoMenuModel.m in Sources */,
 				247131AF1D35CDE3005491A1 /* MyViewController.m in Sources */,
-				241CDF1E1D422232008605D6 /* UserInfo.m in Sources */,
 				242373691D3D01A20075AAB0 /* VideoRecommandViewController.m in Sources */,
 				D633E4911D40B77C00552E29 /* CookingStepTableViewCell.m in Sources */,
 				24907E151D3E0720006F2B57 /* BaseModel.m in Sources */,

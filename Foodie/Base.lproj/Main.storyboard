@@ -252,9 +252,6 @@
                                                         <state key="normal" image="fangshi">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
-                                                        <connections>
-                                                            <action selector="tasterButtonClick:" destination="5ch-bc-NPI" eventType="touchUpInside" id="NQa-q6-UvV"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4u-sJ-Mbq">
                                                         <rect key="frame" x="322" y="20" width="50" height="50"/>
@@ -449,10 +446,10 @@
             </objects>
             <point key="canvasLocation" x="633" y="-709"/>
         </scene>
-        <!--Taste View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="Eer-5Y-XQt">
             <objects>
-                <viewController storyboardIdentifier="TasteViewController" id="lhY-ih-Rpd" customClass="TasteViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="lhY-ih-Rpd" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PNY-KN-Sog"/>
                         <viewControllerLayoutGuide type="bottom" id="pXl-2U-tGx"/>
@@ -475,9 +472,6 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="tasteTableView" destination="eF4-c3-sSU" id="1sN-XB-eK9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cn-19-dsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1099,8 +1093,8 @@
         <image name="fangshi" width="50" height="50"/>
         <image name="huanqiu" width="50" height="50"/>
         <image name="jiankang" width="50" height="50"/>
-        <image name="login_close_icon" width="16" height="16"/>
-        <image name="login_register_background" width="320" height="568"/>
+        <image name="login_close_icon" width="37" height="37"/>
+        <image name="login_register_background" width="37" height="37"/>
         <image name="myImage.png" width="375" height="367"/>
         <image name="star_on_36_1" width="15" height="18"/>
         <image name="tabBar_publish_icon" width="49" height="49"/>
