@@ -18,10 +18,10 @@
     
     NetWorkRequest *request = [[NetWorkRequest alloc]init];
     
-    [request sendDataWithUrl:LikeReque_URL parameters:parameter SuccessResponse:^(NSDictionary *dic) {
+    [request sendDataWithUrl:LikeReque_URL parameters:parameter successResponse:^(NSDictionary *dic) {
         
         success(dic);
-    } FailureResponse:^(NSError *error) {
+    } failureResponse:^(NSError *error) {
         
         failure(error);
     }];

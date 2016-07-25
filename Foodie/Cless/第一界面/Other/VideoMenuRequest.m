@@ -17,11 +17,11 @@
                               failure:(FailureResponse)failure{
     
     NetWorkRequest *request = [[NetWorkRequest alloc]init];
-    [request sendDataWithUrl:VideoMeunRequest_URL parameters:parameter SuccessResponse:^(NSDictionary *dic) {
+    [request sendDataWithUrl:VideoMeunRequest_URL parameters:parameter successResponse:^(NSDictionary *dic) {
         
         success(dic);
         
-    } FailureResponse:^(NSError *error) {
+    } failureResponse:^(NSError *error) {
         
         failure(error);
     }];

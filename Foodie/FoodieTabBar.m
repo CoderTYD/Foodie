@@ -44,7 +44,8 @@
         self.currentSelectedItem = items[0];
         self.allItems = items;
         
-
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideTabBar) name:@"hide" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showTabBar) name:@"show" object:nil];
     }
     
     return self;
@@ -75,7 +76,17 @@
     }
 }
 
+-(void)hideTabBar{
+    NSLog(@"2");
+    self.hidden=YES;
+}
+-(void)showTabBar{
+    self.hidden=NO;
+}
 
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 
 @end

@@ -7,10 +7,8 @@
 //
 
 #import "RootViewController.h"
-#import "FoodieTabBar.h"
 @interface RootViewController ()<FoodieTabBarDelegate>
 
-@property(nonatomic,strong)FoodieTabBar *dbTabBar;
 
 @end
 
@@ -23,6 +21,7 @@
 }
 
 - (void)hideTabBar{
+    NSLog(@"1");
     self.dbTabBar.hidden = YES;
 }
 
@@ -49,7 +48,9 @@
     
     
     self.dbTabBar.foodieDelegate = self;
-
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideTabBar) name:@"hide" object:nil];
+    
 }
 
 -(UIButton *)buttonWithType:(UIButtonType)buttonType image:(UIImage *)image selectedImage:(UIImage *)selectedImage title:(NSString *)title{
@@ -94,7 +95,6 @@
 }
 
 - (void)FoodieItemDidClicked:(FoodieTabBar *)tabBar{
-    
     
     self.selectedIndex = tabBar.currentSelected;
     

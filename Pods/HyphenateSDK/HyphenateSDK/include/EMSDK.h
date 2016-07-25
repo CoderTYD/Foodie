@@ -24,6 +24,9 @@
 
 #import <HyphenateSDK/EMClient.h>
 #import <HyphenateSDK/EMClientDelegate.h>
+#import <HyphenateSDK/EMClient+Call.h>
+
+#import <HyphenateSDK/EMCallSession.h>
 
 #endif
 

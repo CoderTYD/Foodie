@@ -19,10 +19,10 @@
     
     NSString *ID = [parameter objectForKey:@"id"];
     
-    [request sendDataWithUrl:VideoGourmetRequest_URL(ID) parameters:parameter SuccessResponse:^(NSDictionary *dic) {
+    [request sendDataWithUrl:VideoGourmetRequest_URL(ID) parameters:parameter successResponse:^(NSDictionary *dic) {
         
         success(dic);
-    } FailureResponse:^(NSError *error) {
+    } failureResponse:^(NSError *error) {
         
         failure(error);
     }];

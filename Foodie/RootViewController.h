@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FoodieTabBar.h"
 
 
 @interface RootViewController : UITabBarController
 
+@property(nonatomic,strong)FoodieTabBar *dbTabBar;
 
 - (void)showTabBar;
 - (void)hideTabBar;

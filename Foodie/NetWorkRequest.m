@@ -14,14 +14,16 @@
 
 -(void)requestWithUrl:(NSString *)url
            parameters:(NSDictionary *)parameterDic
-      SuccessResponse:(SuccessResponse)success
-      FailureResponse:(FailureResponse)failure{
+      successResponse:(SuccessResponse)success
+      failureResponse:(FailureResponse)failure{
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     //content-type: "text/html"报错信息,类型不匹配
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    manager.securityPolicy.validatesDomainName=NO;
+    manager.securityPolicy.allowInvalidCertificates=YES;
     
     [manager GET:url parameters:parameterDic progress:^(NSProgress * _Nonnull downloadProgress) {
         
@@ -42,8 +44,8 @@
 //登录请求
 - (void)sendDataWithUrl:(NSString *)url
              parameters:(NSDictionary *)parameterDic
-        SuccessResponse:(SuccessResponse)success
-        FailureResponse:(FailureResponse)failure{
+        successResponse:(SuccessResponse)success
+        failureResponse:(FailureResponse)failure{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
@@ -74,8 +76,8 @@
 - (void)sendImageWithUrl:(NSString *)url
              parameters:(NSDictionary *)parameterDic
                   image:(UIImage *)uploadimage
-        SuccessResponse:(SuccessResponse)success
-        FailureResponse:(FailureResponse)failure{
+        successResponse:(SuccessResponse)success
+        failureResponse:(FailureResponse)failure{
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]init];
     [manager POST:url parameters:parameterDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {

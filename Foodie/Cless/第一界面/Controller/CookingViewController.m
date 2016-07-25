@@ -142,13 +142,13 @@
 -(void)requestSubtitleContent:(NSString*)string{
     NetWorkRequest*request = [[NetWorkRequest alloc] init];
     
-    [request requestWithUrl:string parameters:nil SuccessResponse:^(NSDictionary *dic) {
+    [request requestWithUrl:string parameters:nil successResponse:^(NSDictionary *dic) {
         self.foodListArray = dic[@"result"][@"data"];
         //主线程中刷新次级tableView
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.subtitleTV reloadData];
         });
-    } FailureResponse:^(NSError *error) {
+    } failureResponse:^(NSError *error) {
         NSLog(@"error %@",error);
     }];
 }

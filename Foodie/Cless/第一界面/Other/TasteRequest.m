@@ -18,9 +18,9 @@
 
     NetWorkRequest *request = [[NetWorkRequest alloc]init];
     
-    [request sendDataWithUrl:TasteReque_URL parameters:parameter SuccessResponse:^(NSDictionary *dic) {
+    [request sendDataWithUrl:TasteReque_URL parameters:parameter successResponse:^(NSDictionary *dic) {
         success(dic);
-    } FailureResponse:^(NSError *error) {
+    } failureResponse:^(NSError *error) {
         
         failure(error);
     }];

@@ -7,11 +7,12 @@
 //
 
 #import "ChatViewController.h"
-#import "EMSDK.h"
+//#import "EMSDK.h"
 #import "MessageCell.h"
 #import "AlternativeMessageCell.h"
 #import "ImageMessageCell.h"
 #import "AlternativeImageMessageCell.h"
+#import "RootViewController.h"
 
 @interface ChatViewController ()
 <
@@ -29,6 +30,7 @@ EMChatManagerDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.title=[NSString stringWithFormat:@"和%@聊天",self.username];
     [self addSendView];
     [self.chatTableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"messageCell"];
@@ -54,10 +56,23 @@ EMChatManagerDelegate
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.hidesBottomBarWhenPushed=YES;
+//    UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    RootViewController*rootVC=[storyBoard instantiateViewControllerWithIdentifier:@"RootViewController"];
+////    [rootVC.view sendSubviewToBack:rootVC.dbTabBar];
+//    [rootVC hideTabBar];
+////    rootVC.dbTabBar.hidden=YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"hide" object:nil];
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    self.hidesBottomBarWhenPushed=NO;
+//    UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    RootViewController*rootVC=[storyBoard instantiateViewControllerWithIdentifier:@"RootViewController"];
+////    rootVC.dbTabBar.hidden=NO;
+//    [rootVC.view bringSubviewToFront:rootVC.dbTabBar];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"show" object:nil];
     //移除消息回调
     [[EMClient sharedClient].chatManager removeDelegate:self];
 }

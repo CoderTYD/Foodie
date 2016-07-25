@@ -24,20 +24,20 @@ typedef void(^FailureResponse)(NSError *error);
  */
 - (void)requestWithUrl:(NSString *)url
            parameters:(NSDictionary *)parameterDic
-      SuccessResponse:(SuccessResponse)success
-      FailureResponse:(FailureResponse)failure;
+      successResponse:(SuccessResponse)success
+      failureResponse:(FailureResponse)failure;
 
 
 //登录
 - (void)sendDataWithUrl:(NSString *)url
              parameters:(NSDictionary *)parameterDic
-        SuccessResponse:(SuccessResponse)success
-        FailureResponse:(FailureResponse)failure;
+        successResponse:(SuccessResponse)success
+        failureResponse:(FailureResponse)failure;
 //注册
 - (void)sendImageWithUrl:(NSString *)url
              parameters:(NSDictionary *)parameterDic
                   image:(UIImage *)uploadimage
-        SuccessResponse:(SuccessResponse)success
-        FailureResponse:(FailureResponse)failure;
+        successResponse:(SuccessResponse)success
+        failureResponse:(FailureResponse)failure;
 
 @end
