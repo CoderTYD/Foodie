@@ -496,7 +496,7 @@ AddMemberDelegate
     if (tableView==self.friendsTableView) {
         if (indexPath.row) {
             if (!indexPath.section) {
-                NSString *username=[FriendManager shareFriendManager].friendsArray[indexPath.row];
+                NSString *username=[FriendManager shareFriendManager].friendsArray[indexPath.row-1];
                 [self performSegueWithIdentifier:@"ChatViewController" sender:username];
             }
         }else{
@@ -513,10 +513,10 @@ AddMemberDelegate
             }else{
                 if (self.list1IsUnfolding) {
                     self.list1IsUnfolding=NO;
-                    [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationBottom];
+                    [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
                 }else{
                     self.list1IsUnfolding=YES;
-                    [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationTop];
+                    [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
                 }
             }
         }

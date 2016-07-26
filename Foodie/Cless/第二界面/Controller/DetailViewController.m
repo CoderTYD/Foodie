@@ -64,6 +64,7 @@ UIScrollViewDelegate
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self determineNavigationBarType];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newDetailView:) name:@"newDetailView" object:nil];
 }
 
@@ -209,15 +210,19 @@ UIScrollViewDelegate
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-   if (self.tableView.contentOffset.y>125) {
-      [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@""] forBarMetrics:UIBarMetricsDefault];
-   }
-   if (self.tableView.contentOffset.y<250&&self.tableView.contentOffset.y>125) {
-      self.navigationController.navigationBar.alpha=(self.tableView.contentOffset.y-125)/125.0;
-   }
-   if (self.tableView.contentOffset.y<125) {
-      [self setNavigationBarType];
-   }
+    [self determineNavigationBarType];
+}
+
+-(void)determineNavigationBarType{
+    if (self.tableView.contentOffset.y>125) {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@""] forBarMetrics:UIBarMetricsDefault];
+    }
+    if (self.tableView.contentOffset.y<250&&self.tableView.contentOffset.y>125) {
+        self.navigationController.navigationBar.alpha=(self.tableView.contentOffset.y-125)/125.0;
+    }
+    if (self.tableView.contentOffset.y<125) {
+        [self setNavigationBarType];
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

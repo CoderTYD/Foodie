@@ -18,7 +18,9 @@
 <
 UITableViewDataSource,
 UITableViewDelegate,
-EMChatManagerDelegate
+EMChatManagerDelegate,
+UINavigationControllerDelegate,
+UIImagePickerControllerDelegate
 >
 @property (weak, nonatomic) IBOutlet UITableView *chatTableView;
 //所有消息
@@ -40,8 +42,8 @@ EMChatManagerDelegate
     // Do any additional setup after loading the view.
     
     //获取或者创建一个会话
-    EMConversation *conversation = [[EMClient sharedClient].chatManager getConversation:@"8001" type:EMConversationTypeChat createIfNotExist:YES];
-    self.msgArr=[conversation loadMoreMessagesContain:nil before:-1 limit:20 from:nil direction:(EMMessageSearchDirectionUp)].mutableCopy;
+//    EMConversation *conversation = [[EMClient sharedClient].chatManager getConversation:@"8001" type:EMConversationTypeChat createIfNotExist:YES];
+//    self.msgArr=[conversation loadMoreMessagesContain:nil before:-1 limit:20 from:nil direction:(EMMessageSearchDirectionUp)].mutableCopy;
     [self.chatTableView reloadData];
 
     //回到最后
@@ -104,7 +106,7 @@ EMChatManagerDelegate
     [sendButton setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
     [self.view addSubview:sendButton];
     UIButton*picBtn=[UIButton buttonWithType:UIButtonTypeCustom];
-    picBtn.frame=CGRectMake(5, self.view.frame.size.height-50, 30, 30);
+    picBtn.frame=CGRectMake(5, self.view.frame.size.height-46, 30, 30);
     [picBtn addTarget:self action:@selector(sendPic:) forControlEvents:(UIControlEventTouchUpInside)];
     picBtn.backgroundColor=[UIColor whiteColor];
     picBtn.layer.cornerRadius=5;
@@ -131,16 +133,40 @@ EMChatManagerDelegate
                 self.msgTextView.text=@"";
             });
         }];
-    }else{
-        
     }
 }
 
 //试图发送图片 但是崩了
 - (void)sendPic:(UIButton *)sender{
     NSLog(@"🐰");
-    UIImage*image=[UIImage imageNamed:@"c2574e003af33a8768caf2dbc15c10385243b53f副本.jpg"];
-    NSData*imageData=UIImageJPEGRepresentation(image, 1);
+    UIImagePickerController * pc = [[UIImagePickerController alloc]init] ;
+    pc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    //是否允许被编辑
+    pc.allowsEditing = YES;
+    pc.delegate=self;
+    [self presentViewController:pc animated:YES completion:^{
+        
+    }];
+//    UIImage*image=[UIImage imageNamed:@"c2574e003af33a8768caf2dbc15c10385243b53f副本.jpg"];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    UIImage *selectImage = [info objectForKey:UIImagePickerControllerEditedImage];
+    /* 此处info 有六个值
+     * UIImagePickerControllerMediaType; // an NSString UTTypeImage)
+     * UIImagePickerControllerOriginalImage;  // a UIImage 原始图片
+     * UIImagePickerControllerEditedImage;    // a UIImage 裁剪后图片
+     * UIImagePickerControllerCropRect;       // an NSValue (CGRect)
+     * UIImagePickerControllerMediaURL;       // an NSURL
+     * UIImagePickerControllerReferenceURL    // an NSURL that references an asset in the AssetsLibrary framework
+     * UIImagePickerControllerMediaMetadata    // an NSDictionary containing metadata from a captured photo
+     */
+    //退出
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    } ];
+    NSData*imageData=UIImageJPEGRepresentation(selectImage, 1);
     EMImageMessageBody *body = [[EMImageMessageBody alloc] initWithData:imageData displayName:@"image.png"];
     NSString *from = [[EMClient sharedClient] currentUsername];
     
@@ -157,6 +183,7 @@ EMChatManagerDelegate
             self.msgTextView.text=@"";
         });
     }];
+    
 }
 //
 //在线接受普通消息回调
@@ -230,13 +257,11 @@ EMChatManagerDelegate
             }
             break;
         }
-            
         default:
             return nil;
             break;
     }
-    }
-    return nil;
+    } 
 }
 
     

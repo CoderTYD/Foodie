@@ -84,6 +84,7 @@ showCaricature2
         ExhibitionViewController*exhibitPicture=[ExhibitionViewController new];
         exhibitPicture.initialPage=which;
         exhibitPicture.imageStrings=imageStrings;
+    
     [self presentViewController:exhibitPicture animated:YES completion:^{
         
     }];
