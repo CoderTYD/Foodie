@@ -15,6 +15,7 @@
 #import "LikeModel.h"
 #import "LickRequest.h"
 #import "TasteViewController.h"
+#import "ActivityViewController.h"
 
 @interface FoodViewController ()
 <
@@ -158,7 +159,7 @@
     
     NSLog(@"视频菜谱");
     
-//    //跳转到登录界面
+
     UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
     VideoMenuViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"VideoMenuViewController"];
@@ -175,7 +176,7 @@
     
     NSLog(@"食趣");
     
-    //    //跳转到登录界面
+    //
     UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
     TasteViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"TasteViewController"];
@@ -185,6 +186,22 @@
     [self.navigationController pushViewController:loginVC animated:YES];
     
 }
+//跳转活动
+- (IBAction)ActivityClick:(UIButton *)sender {
+    NSLog(@"活动");
+    
+    //
+    UIStoryboard *mainSb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    ActivityViewController *loginVC = [mainSb instantiateViewControllerWithIdentifier:@"ActivityViewController"];
+    //模态样式
+    loginVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self.navigationController pushViewController:loginVC animated:YES];
+    
+}
+
+
 
 
 //轮播图点击方法

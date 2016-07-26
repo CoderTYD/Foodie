@@ -8,7 +8,7 @@
 
 #import "MenuView.h"
 
-@interface MenuView()<AddMemberDelegate>
+@interface MenuView()
 //<UITableViewDataSource,UITableViewDelegate>
 //@property(nonatomic,strong)UIButton*btn1;
 @end
@@ -30,7 +30,7 @@
         UIButton*button1=[[UIButton alloc] initWithFrame:CGRectMake(264, 0, 150, 50)];
         [button1 setTitle:@"添加好友" forState:(UIControlStateNormal)];
         [button1 setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-        button1.backgroundColor=[UIColor darkGrayColor];
+        button1.backgroundColor=[UIColor blackColor];
         [button1 addTarget:self action:@selector(clickedButton1) forControlEvents:(UIControlEventTouchUpInside)];
         button1.titleLabel.textAlignment=NSTextAlignmentLeft;
         [self addSubview:button1];
@@ -38,7 +38,7 @@
         UIButton*button2=[[UIButton alloc] initWithFrame:CGRectMake(264, 50, 150, 50)];
         [button2 setTitle:@"添加黑名单" forState:(UIControlStateNormal)];
         [button2 setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-        button2.backgroundColor=[UIColor darkGrayColor];
+        button2.backgroundColor=[UIColor blackColor];
         button2.titleLabel.textAlignment=NSTextAlignmentLeft;
         [button2 addTarget:self action:@selector(clickedButton2) forControlEvents:(UIControlEventTouchUpInside)];
         [self addSubview:button2];
@@ -47,14 +47,10 @@
 }
 
 -(void)clickedButton1{
-    [self.delegate addFriend];
+    
 }
 -(void)clickedButton2{
-    [self.delegate addBlackList];
-}
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.delegate foldMenu];
+    
 }
 
 //-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

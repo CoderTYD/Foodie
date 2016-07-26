@@ -8,17 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol AddMemberDelegate <NSObject>
-
--(void)addFriend;
-
--(void)addBlackList;
-
--(void)foldMenu;
-
-@end
-
 @interface MenuView : UIView
 @property(nonatomic,strong)UITableView*menu;
-@property(nonatomic,weak)id<AddMemberDelegate>delegate;
 @end

@@ -11,7 +11,6 @@
 @interface FriendManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *friendsArray;
-@property (nonatomic, strong) NSMutableArray *blackListArray;
 @property (nonatomic, strong) NSMutableArray *dialogueArray; 
 + (instancetype)shareFriendManager;
 

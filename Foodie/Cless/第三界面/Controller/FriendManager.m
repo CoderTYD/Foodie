@@ -36,12 +36,6 @@ static FriendManager *_friendManager;
     }
     return _friendsArray;
 }
--(NSMutableArray *)blackListArray{
-    if (nil==_blackListArray) {
-        _blackListArray=[NSMutableArray array];
-    }
-    return _blackListArray;
-}
 -(NSMutableArray *)dialogueArray{
     if (nil==_dialogueArray) {
         _dialogueArray=[NSMutableArray array];
