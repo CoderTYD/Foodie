@@ -32,6 +32,9 @@ EMContactManagerDelegate
 
 @property(nonatomic,assign)BOOL hasShownMenu;
 @property(nonatomic,strong)MenuView*menu;
+
+@property(nonatomic,assign)BOOL list1IsUnfolding;
+@property(nonatomic,assign)BOOL list2IsUnfolding;
 @end
 
 @implementation MessageViewController

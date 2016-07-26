@@ -78,11 +78,10 @@ UIScrollViewDelegate
    [self.tableView registerNib:[UINib nibWithNibName:@"FirstHeaderCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FirstHeaderCell"];
 }
 
--(void)dealloc{
-   [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
+
 
 -(void)newDetailView:(NSNotification*)notification{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
    UIStoryboard*storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
    //    HotelDetailViewController*hotelVC=[storybboard instantiateViewControllerWithIdentifier:@"HotelDetailViewController"];
    //    [self.navigationController pushViewController:hotelVC animated:YES];
